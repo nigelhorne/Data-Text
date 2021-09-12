@@ -3,10 +3,10 @@ use warnings;
 use ExtUtils::MakeMaker 6.64;	# 6.64 for TEST_REQUIRES
 
 WriteMakefile(
-	NAME		=> 'Data::Sentence',
+	NAME		=> 'Data::Text',
 	AUTHOR		=> q{Nigel Horne <njh@bandsman.co.uk>},
-	VERSION_FROM	=> 'lib/Data/Sentence.pm',
-	ABSTRACT_FROM	   => 'lib/Data/Sentence.pm',
+	VERSION_FROM	=> 'lib/Data/Text.pm',
+	ABSTRACT_FROM	   => 'lib/Data/Text.pm',
 	((defined($ExtUtils::MakeMaker::VERSION) &&
 	 ($ExtUtils::MakeMaker::VERSION >= 6.3002))
 	  ? ('LICENSE'=> 'GPL')
@@ -16,6 +16,7 @@ WriteMakefile(
 	'INC' => '',     # e.g., '-I/usr/include/other'
 	PL_FILES	=> {},
 	TEST_REQUIRES => {
+		'Test::Carp' => 0,
 		'Test::Most' => 0,
 		'Test::NoWarnings' => 0,
 		'Test::Warn' => 0,
@@ -23,7 +24,7 @@ WriteMakefile(
 		'Carp' => 0,
 	},
 	dist		=> { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-	clean		=> { FILES => 'Data-Sentence-*' },
+	clean		=> { FILES => 'Data-Text-*' },
 	# META_ADD => {
 		# provides => {}
 	# },
@@ -32,14 +33,14 @@ WriteMakefile(
 		resources => {
 			repository => {
 				type => 'git',
-				url => 'git://github.com/nigelhorne/Data-Sentence.git',
-				web => 'https://github.com/nigelhorne/Data-Sentence',
-				repository => 'https://github.com/nigelhorne/Data-Sentence',
+				url => 'git://github.com/nigelhorne/Data-Text.git',
+				web => 'https://github.com/nigelhorne/Data-Text',
+				repository => 'https://github.com/nigelhorne/Data-Text',
 			}, bugtracker => {
-				# web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Sentence',
-				web => 'https://github.com/nigelhorne/Data-Sentence/issues',
-				url => 'https://github.com/nigelhorne/Data-Sentence/issues',
-				mailto => 'bug-Data-Sentence@rt.cpan.org'
+				# web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Text',
+				web => 'https://github.com/nigelhorne/Data-Text/issues',
+				url => 'https://github.com/nigelhorne/Data-Text/issues',
+				mailto => 'bug-Data-Text@rt.cpan.org'
 			}
 		},
 	},

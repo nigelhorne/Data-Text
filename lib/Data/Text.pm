@@ -1,0 +1,137 @@
+package Data::Text;
+
+use warnings;
+use strict;
+use Carp;
+
+=head1 NAME
+
+Data::Text - Class to handle text in an OO way
+
+=head1 VERSION
+
+Version 0.01
+
+=cut
+
+our $VERSION = '0.01';
+
+=head1 SYNOPSIS
+
+Handle text in an OO way.
+
+=head1 SUBROUTINES/METHODS
+
+=head2 new
+
+Creates a Data::Text object.
+
+=cut
+
+sub new {
+	my $proto = shift;
+	my $class = ref($proto) || $proto;
+
+	# Use Data::Text->new(), not Data::Text::new()
+	if(!defined($class)) {
+		Carp::carp(__PACKAGE__, ': use ->new() not ::new() to instantiate');
+		return;
+	}
+
+	return bless { }, $class;
+}
+
+=head2 append
+
+Adds data to the end of the object.
+
+=cut
+
+sub append {
+	my $self = shift;
+
+	my %params;
+	if(ref($_[0]) eq 'HASH') {
+		%params = %{$_[0]};
+	} elsif(scalar(@_) % 2 == 0) {
+		%params = @_;
+	} else {
+		$params{'text'} = shift;
+	}
+
+	# FIXME: handle ending with an abbreviation
+
+	if($self->{'text'} && ($self->{'text'} =~ /\.\s*$/)) {
+		if($params{'text'} =~ /^\s*\./) {
+			Carp::carp(__PACKAGE__, ': attempt to start with a full stop when object already finishes with a full stop ');
+			return;
+		}
+	}
+	$self->{'text'} .= $params{'text'};
+}
+
+=head2 as_string
+
+Returns the text as a string.
+
+=cut
+
+sub as_string {
+	my $self = shift;
+
+	return $self->{'text'};
+}
+
+=head1 AUTHOR
+
+Nigel Horne, C<< <njh at bandsman.co.uk> >>
+
+=head1 BUGS
+
+=head1 SEE ALSO
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Data::Text
+
+You can also look for information at:
+
+=over 4
+
+=item * MetaCPAN
+
+L<https://metacpan.org/release/Data-Text>
+
+=item * RT: CPAN's request tracker
+
+L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=Data-Text>
+
+=item * CPANTS
+
+L<http://cpants.cpanauthors.org/dist/Data-Text>
+
+=item * CPAN Testers' Matrix
+
+L<http://matrix.cpantesters.org/?dist=Data-Text>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/Data-Text>
+
+=item * CPAN Testers Dependencies
+
+L<http://deps.cpantesters.org/?module=Data::Text>
+
+=back
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright 2010-2021 Nigel Horne.
+
+This program is released under the following licence: GPL2
+
+=cut
+
+1;

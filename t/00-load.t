@@ -5,9 +5,9 @@ use strict;
 use Test::Most tests => 2;
 
 BEGIN {
-    use_ok('Data::Sentence') || print 'Bail out!';
+    use_ok('Data::Text') || print 'Bail out!';
 }
 
-require_ok('Data::Sentence') || print 'Bail out!';
+require_ok('Data::Text') || print 'Bail out!';
 
-diag("Testing Data::Sentence $Data::Sentence::VERSION, Perl $], $^X");
+diag("Testing Data::Text $Data::Text::VERSION, Perl $], $^X");

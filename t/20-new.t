@@ -4,7 +4,7 @@ use strict;
 
 use lib 'lib';
 use Test::Most tests => 2;
-use Data::Sentence;
+use Data::Text;
 
-isa_ok(Data::Sentence->new(), 'Data::Sentence', 'Creating Data::Sentence object');
-ok(!defined(Data::Sentence::new()));
+isa_ok(Data::Text->new(), 'Data::Text', 'Creating Data::Text object');
+ok(!defined(Data::Text::new()));

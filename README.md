@@ -1,2 +1,2 @@
-# Data-Sentence
-Class defining a sentence
+# Data-Text
+Class to handle in an OO way
