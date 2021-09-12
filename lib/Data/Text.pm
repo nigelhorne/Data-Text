@@ -44,6 +44,8 @@ sub new {
 =head2 append
 
 Adds data to the end of the object.
+Contains a simple sanity test for consecutive punctuation.
+I expect I'll improve that.
 
 =cut
 
