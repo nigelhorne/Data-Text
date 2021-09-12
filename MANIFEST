@@ -28,5 +28,5 @@ t/pod.t
 t/port.t
 t/snippets.t
 t/strict.t
-t/used.t
+t/unused.t
 t/vars.t

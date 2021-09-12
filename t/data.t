@@ -20,7 +20,7 @@ DATA: {
 		sub {
 			$d->append("\n\t. A new paragraph.\n");
 		},
-		qr/attempt to start/
+		qr/attempt to add/
 	);
 
 	is($d->as_string(), 'Hello, world.', "Didn't add");
