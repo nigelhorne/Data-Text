@@ -47,12 +47,12 @@ Adds data to the end of the object.
 Contains a simple sanity test for consecutive punctuation.
 I expect I'll improve that.
 
-Calls to append() can be daisy chained.
+Successful calls to append() can be daisy chained.
+
+The argument can be a reference to an array of strings, or an object.
+If called with an object, the message as_string() is sent to it for its contents.
 
 =cut
-
-# TODO: take an array that is not a ref to an array as an argument
-# TODO: if given an object, call as_string() on that object
 
 sub append {
 	my $self = shift;

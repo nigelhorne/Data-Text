@@ -28,6 +28,6 @@ DATA: {
 
 	$d = new_ok('Data::Text');
 
-	is($d->append(['Bonjour', ' ', 'tout le monde']), $d, 'Supports daisy chaining');
+	is($d->append(text => ['Bonjour', ' ', 'tout le monde']), $d, 'Supports daisy chaining');
 	is($d->as_string(), 'Bonjour tout le monde', 'Supports reference to array of strings');
 }
