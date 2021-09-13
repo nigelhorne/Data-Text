@@ -1,4 +1,7 @@
 Revision history for Data::Text
 
+0.02
+	append() messages can now be daisy chained
+
 0.01	Sun Sep 12 16:40:26 EDT 2021
         First draft

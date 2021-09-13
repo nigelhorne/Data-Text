@@ -47,6 +47,8 @@ Adds data to the end of the object.
 Contains a simple sanity test for consecutive punctuation.
 I expect I'll improve that.
 
+Calls to append() can be daisy chained.
+
 =cut
 
 sub append {
@@ -70,6 +72,8 @@ sub append {
 		}
 	}
 	$self->{'text'} .= $params{'text'};
+
+	return $self;
 }
 
 =head2 as_string
