@@ -3,6 +3,7 @@ package Data::Text;
 use warnings;
 use strict;
 use Carp;
+use String::Util;
 
 =head1 NAME
 
@@ -112,6 +113,20 @@ sub length {
 	my $self = shift;
 
 	return length($self->{'text'});
+}
+
+=head2	trim
+
+Removes leading and trailing spaces from the string.
+
+=cut
+
+sub trim {
+	my $self = shift;
+
+	$self->{'text'} = String::Util::trim($self->{'text'});
+
+	return $self
 }
 
 =head1 AUTHOR

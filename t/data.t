@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 9;
+use Test::Most tests => 11;
 use Test::Carp;
 
 BEGIN {
@@ -24,10 +24,14 @@ DATA: {
 	);
 
 	is($d->as_string(), 'Hello, world.', "Didn't add");
-	cmp_ok($d->length(), '==', '13', 'Verify length of the text');
+	cmp_ok($d->length(), '==', '13', 'Verify length() works');
 
 	$d = new_ok('Data::Text');
 
 	is($d->append(text => ['Bonjour', ' ', 'tout le monde']), $d, 'Supports daisy chaining');
 	is($d->as_string(), 'Bonjour tout le monde', 'Supports reference to array of strings');
+
+	$d = new_ok('Data::Text')->append(' There are some spaces here.  ');
+	$d->trim();
+	is($d->as_string(), 'There are some spaces here.', 'Verify trim() workds');
 }

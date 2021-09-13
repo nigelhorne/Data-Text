@@ -24,6 +24,7 @@ WriteMakefile(
 		'Test::Warn' => 0,
 	}, PREREQ_PM => {
 		'Carp' => 0,
+		'String::Util',
 	},
 	dist		=> { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
 	clean		=> { FILES => 'Data-Text-*' },
