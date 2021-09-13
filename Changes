@@ -1,6 +1,6 @@
 Revision history for Data::Text
 
-0.03
+0.03	Mon Sep 13 17:53:32 EDT 2021
 	Added the trim() method
 
 0.02	Mon Sep 13 14:44:50 EDT 2021

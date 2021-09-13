@@ -32,6 +32,5 @@ DATA: {
 	is($d->as_string(), 'Bonjour tout le monde', 'Supports reference to array of strings');
 
 	$d = new_ok('Data::Text')->append(' There are some spaces here.  ');
-	$d->trim();
-	is($d->as_string(), 'There are some spaces here.', 'Verify trim() workds');
+	is($d->trim()->as_string(), 'There are some spaces here.', 'Verify trim() workds');
 }
