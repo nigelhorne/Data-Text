@@ -51,6 +51,9 @@ Calls to append() can be daisy chained.
 
 =cut
 
+# TODO: take an array or ref to an array as an argument
+# TODO: if given an object, call as_string() on that object
+
 sub append {
 	my $self = shift;
 
