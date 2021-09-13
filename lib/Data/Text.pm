@@ -88,6 +88,18 @@ sub as_string {
 	return $self->{'text'};
 }
 
+=head2	length
+
+Returns the length of the text.
+
+=cut
+
+sub length {
+	my $self = shift;
+
+	return length($self->{'text'});
+}
+
 =head1 AUTHOR
 
 Nigel Horne, C<< <njh at bandsman.co.uk> >>

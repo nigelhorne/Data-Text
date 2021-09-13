@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 5;
+use Test::Most tests => 6;
 use Test::Carp;
 
 BEGIN {
@@ -24,4 +24,5 @@ DATA: {
 	);
 
 	is($d->as_string(), 'Hello, world.', "Didn't add");
+	cmp_ok($d->length(), '==', '13', 'Verify length of the text');
 }
