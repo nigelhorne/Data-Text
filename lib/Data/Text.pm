@@ -51,7 +51,7 @@ Calls to append() can be daisy chained.
 
 =cut
 
-# TODO: take an array or ref to an array as an argument
+# TODO: take an array that is not a ref to an array as an argument
 # TODO: if given an object, call as_string() on that object
 
 sub append {
@@ -64,6 +64,17 @@ sub append {
 		%params = @_;
 	} else {
 		$params{'text'} = shift;
+	}
+
+	if(ref($params{'text'})) {
+		# Allow the text to be a reference to a list of strings
+		if(ref($params{'text'}) eq 'ARRAY') {
+			foreach my $text(@{$params{'text'}}) {
+				$self = $self->append($text);
+			}
+			return $self;
+		}
+		$params{'text'} = $params{'text'}->as_string();
 	}
 
 	# FIXME: handle ending with an abbreviation
