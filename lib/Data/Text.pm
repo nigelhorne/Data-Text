@@ -80,8 +80,8 @@ sub append {
 
 	# FIXME: handle ending with an abbreviation
 
-	if($self->{'text'} && ($self->{'text'} =~ /[\.\,]\s*$/)) {
-		if($params{'text'} =~ /^\s*[\.\,]/) {
+	if($self->{'text'} && ($self->{'text'} =~ /[\.\,;]\s*$/)) {
+		if($params{'text'} =~ /^\s*[\.\,;]/) {
 			Carp::carp(__PACKAGE__, ': attempt to add consecutive punctuation');
 			return;
 		}

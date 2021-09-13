@@ -1,5 +1,8 @@
 Revision history for Data::Text
 
+0.04
+	Take semi-colons as punctuation
+
 0.03	Mon Sep 13 17:53:32 EDT 2021
 	Added the trim() method
 
