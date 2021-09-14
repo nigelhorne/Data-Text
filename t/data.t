@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 11;
+use Test::Most tests => 13;
 use Test::Carp;
 
 BEGIN {
@@ -31,6 +31,8 @@ DATA: {
 	is($d->append(text => ['Bonjour', ' ', 'tout le monde']), $d, 'Supports daisy chaining');
 	is($d->as_string(), 'Bonjour tout le monde', 'Supports reference to array of strings');
 
-	$d = new_ok('Data::Text')->append(' There are some spaces here.  ');
-	is($d->trim()->as_string(), 'There are some spaces here.', 'Verify trim() workds');
+	is(new_ok('Data::Text')->append(' There are some spaces here.  ')->trim()->as_string(),
+		'There are some spaces here.', 'Verify trim() works');
+
+	is(new_ok('Data::Text')->append("\tThe tab stays   ")->rtrim()->as_string(), "\tThe tab stays", 'Verify rtrim works');
 }

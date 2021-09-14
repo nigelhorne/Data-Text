@@ -126,7 +126,21 @@ sub trim {
 
 	$self->{'text'} = String::Util::trim($self->{'text'});
 
-	return $self
+	return $self;
+}
+
+=head2	rtrim
+
+Removes trailing spaces from the string.
+
+=cut
+
+sub rtrim {
+	my $self = shift;
+
+	$self->{'text'} = String::Util::rtrim($self->{'text'});
+
+	return $self;
 }
 
 =head1 AUTHOR
