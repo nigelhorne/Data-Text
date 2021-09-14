@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 13;
+use Test::Most tests => 19;
 use Test::Carp;
 
 BEGIN {
@@ -25,6 +25,35 @@ DATA: {
 
 	is($d->as_string(), 'Hello, world.', "Didn't add");
 	cmp_ok($d->length(), '==', '13', 'Verify length() works');
+
+	does_carp_that_matches(
+		sub {
+			$d = new_ok('Data::Text');
+			$d->append('Hello. ');
+			$d->append("\n\t. What is happening?");
+		},
+		qr/attempt to add/
+	);
+
+	does_carp_that_matches(
+		sub {
+			$d = new_ok('Data::Text');
+			$d->append('Hello.');
+			$d->append("\n\t. What is happening?");
+		},
+		qr/attempt to add/
+	);
+
+	does_carp_that_matches(
+		sub {
+			$d = new_ok('Data::Text');
+			$d->append('Hello.');
+			$d->append("\n\t");
+			$d->append('. What is happening?');
+		},
+		qr/attempt to add/
+	);
+
 
 	$d = new_ok('Data::Text');
 
