@@ -57,11 +57,11 @@ DATA: {
 
 	$d = new_ok('Data::Text');
 
-	is($d->append(text => ['Bonjour', ' ', 'tout le monde']), $d, 'Supports daisy chaining');
+	is($d->append(text => ['Bonjour', ' ', 'tout le monde']), $d, 'Supports array refs');
 	is($d->as_string(), 'Bonjour tout le monde', 'Supports reference to array of strings');
 
 	is(new_ok('Data::Text')->append(' There are some spaces here.  ')->trim()->as_string(),
 		'There are some spaces here.', 'Verify trim() works');
 
-	is(new_ok('Data::Text')->append("\tThe tab stays   ")->rtrim()->as_string(), "\tThe tab stays", 'Verify rtrim works');
+	is(new_ok('Data::Text')->append({ text => "\tThe tab stays   " })->rtrim()->as_string(), "\tThe tab stays", 'Verify rtrim works');
 }
