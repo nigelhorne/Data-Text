@@ -43,6 +43,10 @@ Removes leading and trailing spaces from the string.
 
 Removes trailing spaces from the string.
 
+## replace
+
+Replaces words.
+
 # AUTHOR
 
 Nigel Horne, `<njh at bandsman.co.uk>`
@@ -50,6 +54,8 @@ Nigel Horne, `<njh at bandsman.co.uk>`
 # BUGS
 
 # SEE ALSO
+
+[String::Clean](https://metacpan.org/pod/String%3A%3AClean), [String::Util](https://metacpan.org/pod/String%3A%3AUtil)
 
 # SUPPORT
 

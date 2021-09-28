@@ -3,6 +3,7 @@ package Data::Text;
 use warnings;
 use strict;
 use Carp;
+use String::Clean;
 use String::Util;
 
 =head1 NAME
@@ -143,6 +144,21 @@ sub rtrim {
 	return $self;
 }
 
+=head2	replace
+
+Replaces words.
+
+=cut
+
+sub replace {
+	my $self = shift;
+
+	$self->{'clean'} ||= String::Clean->new();
+	$self->{'text'} = $self->{'clean'}->replace(@_, $self->{'text'});
+
+	return $self;
+}
+
 =head1 AUTHOR
 
 Nigel Horne, C<< <njh at bandsman.co.uk> >>
@@ -150,6 +166,8 @@ Nigel Horne, C<< <njh at bandsman.co.uk> >>
 =head1 BUGS
 
 =head1 SEE ALSO
+
+L<String::Clean>, L<String::Util>
 
 =head1 SUPPORT
 

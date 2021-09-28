@@ -1,5 +1,8 @@
 Revision history for Data::Text
 
+0.05
+	Added replace()
+
 0.04	Wed Sep 15 07:33:53 EDT 2021
 	Take semi-colons as punctuation
 	Added the rtrim() method

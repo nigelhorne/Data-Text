@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 19;
+use Test::Most tests => 20;
 use Test::Carp;
 
 BEGIN {
@@ -59,6 +59,9 @@ DATA: {
 
 	is($d->append(text => ['Bonjour', ' ', 'tout le monde']), $d, 'Supports array refs');
 	is($d->as_string(), 'Bonjour tout le monde', 'Supports reference to array of strings');
+
+	$d->replace({ 'Bonjour' => 'Au revoir' });
+	is($d->as_string(), 'Au revoir tout le monde', 'Verify replace works');
 
 	is(new_ok('Data::Text')->append(' There are some spaces here.  ')->trim()->as_string(),
 		'There are some spaces here.', 'Verify trim() works');
