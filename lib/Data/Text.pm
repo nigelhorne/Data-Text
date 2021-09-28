@@ -154,7 +154,7 @@ sub replace {
 	my $self = shift;
 
 	$self->{'clean'} ||= String::Clean->new();
-	$self->{'text'} = $self->{'clean'}->replace(@_, $self->{'text'});
+	$self->{'text'} = $self->{'clean'}->replace(shift, $self->{'text'}, shift);
 
 	return $self;
 }
