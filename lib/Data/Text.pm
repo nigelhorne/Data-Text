@@ -12,11 +12,11 @@ Data::Text - Class to handle text in an OO way
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
@@ -147,6 +147,13 @@ sub rtrim {
 =head2	replace
 
 Replaces words.
+
+    use Data::Text;
+
+    my $dt = Data::Text->new();
+    $dt->append('Hello World');
+    $dt->replace({ 'Hello' => 'Goodbye dear' });
+    print $dt->as_string(), "\n";	# Outputs "Goodbye dear world"
 
 =cut
 
