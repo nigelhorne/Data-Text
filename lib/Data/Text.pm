@@ -68,6 +68,11 @@ sub append {
 		$params{'text'} = shift;
 	}
 
+	if(!defined($params{'text'})) {
+		Carp::carp(__PACKAGE__, ': no text given');
+		return;
+	}
+
 	if(ref($params{'text'})) {
 		# Allow the text to be a reference to a list of strings
 		if(ref($params{'text'}) eq 'ARRAY') {
