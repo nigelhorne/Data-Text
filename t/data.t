@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 20;
+use Test::Most tests => 22;
 use Test::Carp;
 
 BEGIN {
@@ -54,6 +54,13 @@ DATA: {
 		qr/attempt to add/
 	);
 
+	does_carp_that_matches(
+		sub {
+			$d = new_ok('Data::Text');
+			$d->append();
+		},
+		qr/no text given/
+	);
 
 	$d = new_ok('Data::Text');
 
