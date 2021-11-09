@@ -1,6 +1,6 @@
 Revision history for Data::Text
 
-0.06
+0.06	Tue Nov  9 09:55:19 EST 2021
 	Carp if no text is given
 
 0.05	Thu Sep 30 18:17:43 EDT 2021

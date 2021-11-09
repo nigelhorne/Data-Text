@@ -12,11 +12,11 @@ Data::Text - Class to handle text in an OO way
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 SYNOPSIS
 
@@ -49,7 +49,7 @@ Adds data to the end of the object.
 Contains a simple sanity test for consecutive punctuation.
 I expect I'll improve that.
 
-Successful calls to append() can be daisy chained.
+Successive calls to append() can be daisy chained.
 
 The argument can be a reference to an array of strings, or an object.
 If called with an object, the message as_string() is sent to it for its contents.
