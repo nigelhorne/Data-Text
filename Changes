@@ -1,5 +1,8 @@
 Revision history for Data::Text
 
+0.07
+	Length() now returns 0 when no text has been appended
+
 0.06	Tue Nov  9 09:55:19 EST 2021
 	Carp if no text is given
 

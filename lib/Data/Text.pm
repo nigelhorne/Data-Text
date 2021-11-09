@@ -118,6 +118,10 @@ Returns the length of the text.
 sub length {
 	my $self = shift;
 
+	if(!defined($self->{'text'})) {
+		return 0;
+	}
+
 	return length($self->{'text'});
 }
 
