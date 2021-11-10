@@ -4,7 +4,7 @@ Data::Text - Class to handle text in an OO way
 
 # VERSION
 
-Version 0.06
+Version 0.07
 
 # SYNOPSIS
 
