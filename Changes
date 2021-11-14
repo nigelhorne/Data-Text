@@ -1,6 +1,6 @@
 Revision history for Data::Text
 
-0.08
+0.08	Sun Nov 14 18:54:41 EST 2021
 	Added the set() method
 
 0.07	Tue Nov  9 19:11:42 EST 2021

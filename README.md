@@ -4,7 +4,7 @@ Data::Text - Class to handle text in an OO way
 
 # VERSION
 
-Version 0.07
+Version 0.08
 
 # SYNOPSIS
 
@@ -16,9 +16,13 @@ Handle text in an OO way.
 
 Creates a Data::Text object.
 
+## set
+
+Sets the object to contain the given text.
+
 ## append
 
-Adds data to the end of the object.
+Adds data given in "text" to the end of the object.
 Contains a simple sanity test for consecutive punctuation.
 I expect I'll improve that.
 
