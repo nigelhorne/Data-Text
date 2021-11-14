@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 22;
+use Test::Most tests => 24;
 use Test::Carp;
 
 BEGIN {
@@ -12,9 +12,11 @@ BEGIN {
 DATA: {
 	my $d = new_ok('Data::Text');
 
-	$d->append('Hello, world.');
+	is($d->set('Hello, world.')->as_string(), 'Hello, world.', 'Basic test');
 
-	is($d->as_string(), 'Hello, world.', 'Basic test');
+	$d = new_ok('Data::Text');
+
+	is($d->append('Hello, world.')->as_string(), 'Hello, world.', 'Basic test');
 
 	does_carp_that_matches(
 		sub {

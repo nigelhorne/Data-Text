@@ -43,9 +43,49 @@ sub new {
 	return bless { }, $class;
 }
 
+=head2 set
+
+Sets the object to contain the given text.
+
+=cut
+
+sub set {
+	my $self = shift;
+
+	my %params;
+	if(ref($_[0]) eq 'HASH') {
+		%params = %{$_[0]};
+	} elsif(scalar(@_) % 2 == 0) {
+		%params = @_;
+	} else {
+		$params{'text'} = shift;
+	}
+
+	if(!defined($params{'text'})) {
+		Carp::carp(__PACKAGE__, ': no text given');
+		return;
+	}
+
+	if(ref($params{'text'})) {
+		# Allow the text to be a reference to a list of strings
+		if(ref($params{'text'}) eq 'ARRAY') {
+			foreach my $text(@{$params{'text'}}) {
+				$self = $self->append($text);
+			}
+			return $self;
+		}
+		$params{'text'} = $params{'text'}->as_string();
+	}
+
+	$self->{'text'} = $params{'text'};
+
+	return $self;
+}
+
+
 =head2 append
 
-Adds data to the end of the object.
+Adds data given in "text" to the end of the object.
 Contains a simple sanity test for consecutive punctuation.
 I expect I'll improve that.
 
