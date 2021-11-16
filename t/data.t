@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 24;
+use Test::Most tests => 28;
 use Test::Carp;
 
 BEGIN {
@@ -12,11 +12,19 @@ BEGIN {
 DATA: {
 	my $d = new_ok('Data::Text');
 
-	is($d->set('Hello, world.')->as_string(), 'Hello, world.', 'Basic test');
+	is($d->set('Hello, world.')->as_string(), 'Hello, world.', 'Basic set test');
+
+	$d = new_ok('Data::Text', [text => 'Tulip']);
+
+	is($d->as_string(), 'Tulip', 'Initialisation with a string works');
+
+	$d = new_ok('Data::Text', [text => $d]);
+
+	is($d->as_string(), 'Tulip', 'Initialisation with an object works');
 
 	$d = new_ok('Data::Text');
 
-	is($d->append('Hello, world.')->as_string(), 'Hello, world.', 'Basic test');
+	is($d->append('Hello, world.')->as_string(), 'Hello, world.', 'Basic append test');
 
 	does_carp_that_matches(
 		sub {

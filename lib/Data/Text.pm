@@ -28,6 +28,8 @@ Handle text in an OO way.
 
 Creates a Data::Text object.
 
+The optional parameter 'text' contains a string, or object, to initialise the object with.
+
 =cut
 
 sub new {
@@ -38,6 +40,12 @@ sub new {
 	if(!defined($class)) {
 		Carp::carp(__PACKAGE__, ': use ->new() not ::new() to instantiate');
 		return;
+	}
+
+	if(scalar(@_)) {
+		my $self = bless { }, $class;
+
+		return $self->set(@_);
 	}
 
 	return bless { }, $class;
