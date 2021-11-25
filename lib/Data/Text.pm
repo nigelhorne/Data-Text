@@ -77,6 +77,7 @@ sub set {
 	if(ref($params{'text'})) {
 		# Allow the text to be a reference to a list of strings
 		if(ref($params{'text'}) eq 'ARRAY') {
+			delete $self->{'text'};
 			foreach my $text(@{$params{'text'}}) {
 				$self = $self->append($text);
 			}
@@ -175,7 +176,7 @@ sub length {
 
 =head2	trim
 
-Removes leading and trailing spaces from the string.
+Removes leading and trailing spaces from the text.
 
 =cut
 
@@ -189,7 +190,7 @@ sub trim {
 
 =head2	rtrim
 
-Removes trailing spaces from the string.
+Removes trailing spaces from the text.
 
 =cut
 
