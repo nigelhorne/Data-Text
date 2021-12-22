@@ -83,10 +83,10 @@ sub set {
 			}
 			return $self;
 		}
-		$params{'text'} = $params{'text'}->as_string();
+		$self->{'text'} = $params{'text'}->as_string();
+	} else {
+		$self->{'text'} = $params{'text'};
 	}
-
-	$self->{'text'} = $params{'text'};
 
 	return $self;
 }
