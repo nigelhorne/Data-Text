@@ -22,6 +22,12 @@ our $VERSION = '0.09';
 
 Handle text in an OO way.
 
+    use Data::Text;
+
+    my $d = Data::Text->new("Hello, World!\n");
+
+    print $d->as_string();
+
 =head1 SUBROUTINES/METHODS
 
 =head2 new
@@ -55,6 +61,11 @@ sub new {
 
 Sets the object to contain the given text.
 
+The argument can be a reference to an array of strings, or an object.
+If called with an object, the message as_string() is sent to it for its contents.
+
+    $d->set({ text => "Hello, World\!" });
+
 =cut
 
 sub set {
@@ -77,9 +88,17 @@ sub set {
 	if(ref($params{'text'})) {
 		# Allow the text to be a reference to a list of strings
 		if(ref($params{'text'}) eq 'ARRAY') {
+			if(scalar(@{$params{'text'}}) == 0) {
+				Carp::carp(__PACKAGE__, ': no text given');
+				return;
+			}
 			delete $self->{'text'};
 			foreach my $text(@{$params{'text'}}) {
-				$self = $self->append($text);
+				if(ref($text)) {
+					$self = $self->append($text->as_string());
+				} else {
+					$self = $self->append($text);
+				}
 			}
 			return $self;
 		}
@@ -99,6 +118,8 @@ Contains a simple sanity test for consecutive punctuation.
 I expect I'll improve that.
 
 Successive calls to append() can be daisy chained.
+
+    $d->set('Hello ')->append("World!\n");
 
 The argument can be a reference to an array of strings, or an object.
 If called with an object, the message as_string() is sent to it for its contents.
@@ -125,8 +146,16 @@ sub append {
 	if(ref($params{'text'})) {
 		# Allow the text to be a reference to a list of strings
 		if(ref($params{'text'}) eq 'ARRAY') {
+			if(scalar(@{$params{'text'}}) == 0) {
+				Carp::carp(__PACKAGE__, ': no text given');
+				return;
+			}
 			foreach my $text(@{$params{'text'}}) {
-				$self = $self->append($text);
+				if(ref($text)) {
+					$self = $self->append($text->as_string());
+				} else {
+					$self = $self->append($text);
+				}
 			}
 			return $self;
 		}
@@ -272,7 +301,7 @@ L<http://deps.cpantesters.org/?module=Data::Text>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2021 Nigel Horne.
+Copyright 2022 Nigel Horne.
 
 This program is released under the following licence: GPL2
 
