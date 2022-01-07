@@ -166,7 +166,7 @@ sub append {
 
 	if($self->{'text'} && ($self->{'text'} =~ /[\.\,;]\s*$/)) {
 		if($params{'text'} =~ /^\s*[\.\,;]/) {
-			Carp::carp(__PACKAGE__, ': attempt to add consecutive punctuation');
+			Carp::carp(__PACKAGE__, ": attempt to add consecutive punctuation\n\tText = '", $self->{'text'}, "'");
 			return;
 		}
 	}
@@ -301,7 +301,7 @@ L<http://deps.cpantesters.org/?module=Data::Text>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2022 Nigel Horne.
+Copyright 2021-2022 Nigel Horne.
 
 This program is released under the following licence: GPL2
 
