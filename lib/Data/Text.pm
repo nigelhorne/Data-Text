@@ -166,7 +166,14 @@ sub append {
 
 	if($self->{'text'} && ($self->{'text'} =~ /[\.\,;]\s*$/)) {
 		if($params{'text'} =~ /^\s*[\.\,;]/) {
-			Carp::carp(__PACKAGE__, ": attempt to add consecutive punctuation\n\tText = '", $self->{'text'}, "'");
+			Carp::carp(__PACKAGE__,
+			# die(__PACKAGE__,
+				": attempt to add consecutive punctuation\n\tCurrent = '",
+				$self->{'text'},
+				"'\n\tAppend = '",
+				$params{'text'},
+				'"',
+			);
 			return;
 		}
 	}
