@@ -4,6 +4,7 @@ Revision history for Data::Text
 	set() when given a list of strings would append instead of setting
 	Carp when given a reference to an empty array
 	Give more helpful error message
+	Simplify the code
 
 0.09	Tue Nov 16 08:14:19 EST 2021
 	new() now supports initialisation of the object
