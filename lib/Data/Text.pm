@@ -65,6 +65,7 @@ The argument can be a reference to an array of strings, or an object.
 If called with an object, the message as_string() is sent to it for its contents.
 
     $d->set({ text => "Hello, World!\n" });
+    $d->set(text => [ 'Hello, ', 'World!', "\n" ]);
 
 =cut
 
