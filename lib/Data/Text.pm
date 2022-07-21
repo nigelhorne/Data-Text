@@ -95,11 +95,7 @@ sub set {
 			}
 			delete $self->{'text'};
 			foreach my $text(@{$params{'text'}}) {
-				if(ref($text)) {
-					$self = $self->append($text->as_string());
-				} else {
-					$self = $self->append($text);
-				}
+				$self = $self->append($text);
 			}
 			return $self;
 		}
@@ -152,11 +148,7 @@ sub append {
 				return;
 			}
 			foreach my $text(@{$params{'text'}}) {
-				if(ref($text)) {
-					$self = $self->append($text->as_string());
-				} else {
-					$self = $self->append($text);
-				}
+				$self = $self->append($text);
 			}
 			return $self;
 		}
