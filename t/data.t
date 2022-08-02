@@ -18,7 +18,7 @@ DATA: {
 
 	$d = new_ok('Data::Text', [text => 'Tulip']);
 
-	is($d->as_string(), 'Tulip', 'Initialisation with a string works');
+	cmp_ok($d, 'eq', 'Tulip', 'Initialisation with a string works');
 
 	$d = new_ok('Data::Text', [text => $d]);
 

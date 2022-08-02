@@ -18,6 +18,14 @@ Version 0.09
 
 our $VERSION = '0.09';
 
+use overload (
+        '==' => \&equal,
+        '!=' => \&not_equal,
+        '""' => \&as_string,
+        bool => sub { 1 },
+        fallback => 1   # So that boolean tests don't cause as_string to be called
+);
+
 =head1 SYNOPSIS
 
 Handle text in an OO way.
@@ -173,6 +181,40 @@ sub append {
 	$self->{'text'} .= $params{'text'};
 
 	return $self;
+}
+
+=head2	equal
+
+Are two texts the same?
+
+    my $t1 = Data::Text->new('word');
+    my $t2 = Data::Text->new('word');
+    print ($t1 == $t2), "\n";	# Prints 1
+
+=cut
+
+sub equal {
+	my $self = shift;
+	my $other = shift;
+
+	return $self->as_string() eq $other->as_string();
+}
+
+=head2	not_equal
+
+Are two texts different?
+
+    my $t1 = Data::Text->new('xyzzy');
+    my $t2 = Data::Text->new('plugh');
+    print ($t1 != $t2), "\n";	# Prints 1
+
+=cut
+
+sub not_equal {
+	my $self = shift;
+	my $other = shift;
+
+	return $self->as_string() ne $other->as_string();
 }
 
 =head2 as_string
