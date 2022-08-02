@@ -4,7 +4,7 @@ Data::Text - Class to handle text in an OO way
 
 # VERSION
 
-Version 0.09
+Version 0.10
 
 # SYNOPSIS
 
@@ -31,7 +31,8 @@ Sets the object to contain the given text.
 The argument can be a reference to an array of strings, or an object.
 If called with an object, the message as\_string() is sent to it for its contents.
 
-    $d->set({ text => "Hello, World\!" });
+    $d->set({ text => "Hello, World!\n" });
+    $d->set(text => [ 'Hello, ', 'World!', "\n" ]);
 
 ## append
 
@@ -45,6 +46,22 @@ Successive calls to append() can be daisy chained.
 
 The argument can be a reference to an array of strings, or an object.
 If called with an object, the message as\_string() is sent to it for its contents.
+
+## equal
+
+Are two texts the same?
+
+    my $t1 = Data::Text->new('word');
+    my $t2 = Data::Text->new('word');
+    print ($t1 == $t2), "\n";   # Prints 1
+
+## not\_equal
+
+Are two texts different?
+
+    my $t1 = Data::Text->new('xyzzy');
+    my $t2 = Data::Text->new('plugh');
+    print ($t1 != $t2), "\n";   # Prints 1
 
 ## as\_string
 
@@ -117,6 +134,6 @@ You can also look for information at:
 
 # LICENSE AND COPYRIGHT
 
-Copyright 2022 Nigel Horne.
+Copyright 2021-2022 Nigel Horne.
 
 This program is released under the following licence: GPL2
