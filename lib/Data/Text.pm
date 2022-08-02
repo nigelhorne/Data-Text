@@ -42,27 +42,34 @@ Handle text in an OO way.
 
 Creates a Data::Text object.
 
-The optional parameter 'text' contains a string, or object, to initialise the object with.
+The optional parameter contains a string, or object, to initialise the object with.
 
 =cut
 
 sub new {
-	my $proto = shift;
-	my $class = ref($proto) || $proto;
+	my $class = shift;
+	my $self;
 
-	# Use Data::Text->new(), not Data::Text::new()
 	if(!defined($class)) {
-		Carp::carp(__PACKAGE__, ': use ->new() not ::new() to instantiate');
-		return;
+		# Using Data::Text->new(), not Data::Text::new()
+		# carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
+		# return;
+
+		# FIXME: this only works when no arguments are given
+		$self = bless { }, __PACKAGE__;
+	} elsif(ref($class)) {
+		# clone the given object
+		$self = bless { }, ref($class);
+		return $self->set($class);
+	} else {
+		$self = bless { }, $class;
 	}
 
 	if(scalar(@_)) {
-		my $self = bless { }, $class;
-
 		return $self->set(@_);
 	}
 
-	return bless { }, $class;
+	return $self;
 }
 
 =head2 set
