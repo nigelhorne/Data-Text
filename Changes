@@ -1,6 +1,7 @@
 Revision history for Data::Text
 
 0.11
+	Avoid assert failure in String::Clean
 	Calling new() on an object now returns a clone rather than setting the defaults in the new object
 
 0.10	Mon Aug  1 21:01:05 EDT 2022

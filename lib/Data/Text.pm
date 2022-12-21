@@ -296,8 +296,11 @@ Replaces words.
 sub replace {
 	my $self = shift;
 
-	$self->{'clean'} ||= String::Clean->new();
-	$self->{'text'} = $self->{'clean'}->replace(shift, $self->{'text'}, shift);
+	# avoid assert failure in String::Clean
+	if($self->{'text'}) {
+		$self->{'clean'} ||= String::Clean->new();
+		$self->{'text'} = $self->{'clean'}->replace(shift, $self->{'text'}, shift);
+	}
 
 	return $self;
 }
