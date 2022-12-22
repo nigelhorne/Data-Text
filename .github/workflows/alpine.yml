@@ -1,0 +1,37 @@
+---
+# see https://github.com/FGasper/perl-github-action-tips
+
+name: Test Code on Alpine Linux
+on:
+  push:
+    branches:
+      - '*'
+    tags-ignore:
+      - '*'
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: alpine
+
+    steps:
+      - name: Install Dependencies
+        continue-on-error: true
+        run: |
+          apk update
+          apk upgrade
+          apk add perl perl-app-cpanminus make gzip
+          perl -V
+          cpanm -iqn --skip-satisfied ExtUtils::MakeMaker
+          cpanm -iqn --skip-satisfied Test::Pod::Spelling::CommonMistakes Test::Portability::Files Test::Carp Test::Pod::Coverage Test::Most
+          cpanm -iqn --skip-satisfied --installdeps --notest .
+          cpanm -iv --installdeps --notest .
+      - name: Make module
+        run: |
+          find ~ -name build.log | xargs cat
+          perl Makefile.PL
+          make
+      - name: Run Tests
+        run: prove -wlvmb t
