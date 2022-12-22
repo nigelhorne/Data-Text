@@ -1,4 +1,6 @@
 ---
+name: Test Code
+
 on:
   push:
     branches:
@@ -14,7 +16,7 @@ jobs:
       matrix:
         os:
           - macos-latest
-          - ubuntu-18.04
+          - ubuntu-22.04
           - ubuntu-20.04
           - windows-2022
           - windows-2019
