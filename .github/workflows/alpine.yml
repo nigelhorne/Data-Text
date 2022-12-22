@@ -24,7 +24,7 @@ jobs:
           apk upgrade
           apk add perl perl-app-cpanminus make gzip
           perl -V
-          cpanm -iqn --skip-satisfied ExtUtils::MakeMaker Test::Most
+          cpanm -iqn ExtUtils::MakeMaker Test::Most
           cpanm -iqn --skip-satisfied --installdeps --notest .
       - name: Make module
         run: |
