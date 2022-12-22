@@ -18,8 +18,8 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-20.04
           - ubuntu-22.04
+          - ubuntu-20.04
         perl-version: ['5.36', '5.34', '5.32', '5.30', '5.28', '5.22', '5.20', '5.18', '5.16', '5.14']
     name: Perl ${{ matrix.perl-version }} on ${{ matrix.os }}
 
@@ -37,13 +37,17 @@ jobs:
           cpanm -iqn --skip-satisfied ExtUtils::MakeMaker
           cpanm -iqn --skip-satisfied Test::Pod::Spelling::CommonMistakes Test::Portability::Files Test::Carp Test::Pod::Coverage Test::Most
           cpanm -iqn --skip-satisfied --installdeps --notest .
+#     - name: Run Tests
+#       run: |
+#        cover -test
+#        cover -report codecov
+#        curl -Os https://uploader.codecov.io/latest/linux/codecov
+#        chmod +x codecov
+#        ./codecov -t ${{ secrets.CODECOV_TOKEN }}
+#       shell: bash
+#       env:
+#         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Run Tests
-        run: |
-          cover -test
-          cover -report codecov
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov -t ${{ secrets.CODECOV_TOKEN }}
-        shell: bash
+        run: prove -l -b t
         env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          AUTHOR_TESTING: 1
