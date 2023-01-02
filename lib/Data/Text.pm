@@ -180,7 +180,7 @@ sub append {
 				$self->{'text'},
 				"'\n\tAppend = '",
 				$params{'text'},
-				'"',
+				"'",
 			);
 			return;
 		}
