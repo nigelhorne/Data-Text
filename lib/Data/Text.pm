@@ -122,7 +122,6 @@ sub set {
 	return $self;
 }
 
-
 =head2 append
 
 Adds data given in "text" to the end of the object.
@@ -155,6 +154,13 @@ sub append {
 		return;
 	}
 
+	# Make a note of the caller for ease of debugging
+	my $file = $self->{'file'};
+	my $line = $self->{'line'};
+	my @call_details = caller(0);
+	$self->{'file'} = $call_details[1];
+	$self->{'line'} = $call_details[2];
+
 	if(ref($params{'text'})) {
 		# Allow the text to be a reference to a list of strings
 		if(ref($params{'text'}) eq 'ARRAY') {
@@ -174,11 +180,11 @@ sub append {
 
 	if($self->{'text'} && ($self->{'text'} =~ /[\.\,;]\s*$/)) {
 		if($params{'text'} =~ /^\s*[\.\,;]/) {
-			Carp::carp(__PACKAGE__,
 			# die(__PACKAGE__,
+			Carp::carp(__PACKAGE__,
 				": attempt to add consecutive punctuation\n\tCurrent = '",
 				$self->{'text'},
-				"'\n\tAppend = '",
+				"' added at $line of $file\n\tAppend = '",
 				$params{'text'},
 				"'",
 			);
