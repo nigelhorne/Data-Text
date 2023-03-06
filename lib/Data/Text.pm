@@ -101,6 +101,10 @@ sub set {
 		return;
 	}
 
+	my @call_details = caller(0);
+	$self->{'file'} = $call_details[1];
+	$self->{'line'} = $call_details[2];
+
 	if(ref($params{'text'})) {
 		# Allow the text to be a reference to a list of strings
 		if(ref($params{'text'}) eq 'ARRAY') {
@@ -178,7 +182,7 @@ sub append {
 
 	# FIXME: handle ending with an abbreviation
 
-	if($self->{'text'} && ($self->{'text'} =~ /[\.\,;]\s*$/)) {
+	if($self->{'text'} && ($self->{'text'} =~ /\s*[\.\,;]\s*$/)) {
 		if($params{'text'} =~ /^\s*[\.\,;]/) {
 			# die(__PACKAGE__,
 			Carp::carp(__PACKAGE__,

@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 40;
+use Test::Most tests => 42;
 use Test::Carp;
 
 BEGIN {
@@ -62,6 +62,14 @@ DATA: {
 			$d->append('Hello.');
 			$d->append("\n\t");
 			$d->append('. What is happening?');
+		},
+		qr/attempt to add/
+	);
+
+	does_carp_that_matches(
+		sub {
+			$d = new_ok('Data::Text', [text => 'Hey, where are you'])->append(', ');
+			$d->append(', what is happening?');
 		},
 		qr/attempt to add/
 	);
