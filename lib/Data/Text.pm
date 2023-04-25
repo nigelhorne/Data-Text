@@ -343,10 +343,6 @@ L<https://metacpan.org/release/Data-Text>
 
 L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=Data-Text>
 
-=item * CPANTS
-
-L<http://cpants.cpanauthors.org/dist/Data-Text>
-
 =item * CPAN Testers' Matrix
 
 L<http://matrix.cpantesters.org/?dist=Data-Text>
