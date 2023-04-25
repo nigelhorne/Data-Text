@@ -35,7 +35,8 @@ jobs:
           shell: bash
           run: |
             sudo ${{ matrix.os.pkginstall }}
-            curl -L https://cpanmin.us | sudo perl - --verbose --notest --installdeps --with-configure --with-develop .
+            curl -L https://cpanmin.us | sudo perl - --notest --installdeps --with-configure --with-develop .
+            sudo chown -R runner:runner .
             perl Makefile.PL
             make
-            prove -wlvmb t
+            prove -wlmb t
