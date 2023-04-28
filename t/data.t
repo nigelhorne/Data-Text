@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::Most tests => 42;
+use Test::Most tests => 43;
 use Test::Carp;
 
 BEGIN {
@@ -15,6 +15,7 @@ DATA: {
 	is($d->as_string(), undef, 'Undef before data has been added');
 	cmp_ok($d->length(), '==', '0', 'Verify length() works on new string');
 	is($d->set('Hello, world.')->as_string(), 'Hello, world.', 'Basic set test');
+	is($d->set({ text => 'Hello, world!' })->as_string(), 'Hello, world!', 'Basic set test giving ref argument');
 
 	$d = new_ok('Data::Text', [text => 'Tulip']);
 
