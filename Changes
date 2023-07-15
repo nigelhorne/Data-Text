@@ -1,6 +1,6 @@
 Revision history for Data::Text
 
-0.12
+0.12	Sat Jul 15 11:02:11 EDT 2023
 	Fix punctuation in error message
 	More useful diagnostic when adding consecutive punctuation
 	Catch more consecutive punctuation
