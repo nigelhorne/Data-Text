@@ -3,6 +3,7 @@ package Data::Text;
 use warnings;
 use strict;
 use Carp;
+use Lingua::Conjunction;
 use String::Clean;
 use String::Util;
 
@@ -311,6 +312,30 @@ sub replace {
 		$self->{'clean'} ||= String::Clean->new();
 		$self->{'text'} = $self->{'clean'}->replace(shift, $self->{'text'}, shift);
 	}
+
+	return $self;
+}
+
+=head2	appendconjunction
+
+Add a list as a conjunction.  See L<Lingua::Conjunction>
+Because of the way Data::Text works with quoting,
+this code works
+
+    my $d1 = Data::Text->new();
+    my $d2 = Data::Text->new('a');
+    my $d3 = Data::Text->new('b');
+
+    # Prints "a and b\n"
+    print $d1->appendconjunction($d2, $d3)->("\n");
+
+=cut
+
+sub appendconjunction
+{
+	my $self = shift;
+
+	$self->append(Lingua::Conjunction::conjunction(@_));
 
 	return $self;
 }
