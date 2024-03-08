@@ -34,9 +34,10 @@ jobs:
           version: ${{ matrix.os.version }}
           shell: bash
           run: |
+            sudo hostname example.com
             sudo ${{ matrix.os.pkginstall }}
             curl -L https://cpanmin.us | sudo perl - --notest --installdeps --with-configure --with-develop .
             sudo chown -R runner:runner .
-            perl Makefile.PL
-            make
-            prove -wlmb t
+            AUTOMATED_TESTING=1 perl Makefile.PL
+            AUTOMATED_TESTING=1 make
+            AUTOMATED_TESTING=1 prove -wlmb t

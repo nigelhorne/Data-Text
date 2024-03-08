@@ -372,10 +372,6 @@ L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=Data-Text>
 
 L<http://matrix.cpantesters.org/?dist=Data-Text>
 
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Data-Text>
-
 =item * CPAN Testers Dependencies
 
 L<http://deps.cpantesters.org/?module=Data::Text>
@@ -384,7 +380,7 @@ L<http://deps.cpantesters.org/?module=Data::Text>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2021-2022 Nigel Horne.
+Copyright 2021-2024 Nigel Horne.
 
 This program is released under the following licence: GPL2
 
