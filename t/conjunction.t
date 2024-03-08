@@ -18,5 +18,5 @@ CONJUNCTION: {
 	my $d1 = new_ok('Data::Text' => ['a']);
 	my $d2 = new_ok('Data::Text' => ['b']);
 
-	cmp_ok($d->appendconjunction($d1, $d2)->as_string(), 'eq', 'a and b', 'conjunction works');
+	cmp_ok($d->appendconjunction($d1, $d2), 'eq', 'a and b', 'conjunction works on objects');
 }
