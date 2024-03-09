@@ -18,7 +18,7 @@ jobs:
         os:
           - name: freebsd
             version: '13.0'
-            pkginstall: pkg install -y p5-ExtUtils-MakeMaker
+            pkginstall: pkg install -y p5-ExtUtils-MakeMaker p5-Test-Most p5-Test-Warn
           - name: openbsd
             version: '7.1'
             pkginstall: pkg_add p5-ExtUtils-MakeMaker
