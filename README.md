@@ -4,7 +4,7 @@ Data::Text - Class to handle text in an OO way
 
 # VERSION
 
-Version 0.12
+Version 0.13
 
 # SYNOPSIS
 
@@ -101,7 +101,7 @@ this code works
     my $d3 = Data::Text->new('b');
 
     # Prints "a and b\n"
-    print $d1->appendconjunction($d2, $d3)->("\n");
+    print $d1->appendconjunction($d2, $d3)->append("\n");
 
 # AUTHOR
 

@@ -27,6 +27,10 @@ jobs:
       image: perldocker/perl-tester:${{ matrix.perl-version }}
 
     steps:
+      - name: update
+        run: |
+          apt update
+          apt dist-upgrade
       - uses: actions/checkout@main
         with:
           submodules: recursive
