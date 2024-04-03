@@ -348,7 +348,7 @@ Nigel Horne, C<< <njh at bandsman.co.uk> >>
 
 =head1 SEE ALSO
 
-L<String::Clean>, L<String::Util>
+L<String::Clean>, L<String::Util>, L<Lingua::String>
 
 =head1 SUPPORT
 
