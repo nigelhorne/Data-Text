@@ -87,17 +87,9 @@ If called with an object, the message as_string() is sent to it for its contents
 
 sub set {
 	my $self = shift;
+	my $params = $self->_get_params('text', @_);
 
-	my %params;
-	if(ref($_[0]) eq 'HASH') {
-		%params = %{$_[0]};
-	} elsif(scalar(@_) % 2 == 0) {
-		%params = @_;
-	} else {
-		$params{'text'} = shift;
-	}
-
-	if(!defined($params{'text'})) {
+	if(!defined($params->{'text'})) {
 		Carp::carp(__PACKAGE__, ': no text given');
 		return;
 	}
@@ -106,22 +98,22 @@ sub set {
 	$self->{'file'} = $call_details[1];
 	$self->{'line'} = $call_details[2];
 
-	if(ref($params{'text'})) {
+	if(ref($params->{'text'})) {
 		# Allow the text to be a reference to a list of strings
-		if(ref($params{'text'}) eq 'ARRAY') {
-			if(scalar(@{$params{'text'}}) == 0) {
+		if(ref($params->{'text'}) eq 'ARRAY') {
+			if(scalar(@{$params->{'text'}}) == 0) {
 				Carp::carp(__PACKAGE__, ': no text given');
 				return;
 			}
 			delete $self->{'text'};
-			foreach my $text(@{$params{'text'}}) {
+			foreach my $text(@{$params->{'text'}}) {
 				$self = $self->append($text);
 			}
 			return $self;
 		}
-		$self->{'text'} = $params{'text'}->as_string();
+		$self->{'text'} = $params->{'text'}->as_string();
 	} else {
-		$self->{'text'} = $params{'text'};
+		$self->{'text'} = $params->{'text'};
 	}
 
 	return $self;
@@ -144,17 +136,9 @@ If called with an object, the message as_string() is sent to it for its contents
 
 sub append {
 	my $self = shift;
+	my $params = $self->_get_params('text', @_);
 
-	my %params;
-	if(ref($_[0]) eq 'HASH') {
-		%params = %{$_[0]};
-	} elsif(scalar(@_) % 2 == 0) {
-		%params = @_;
-	} else {
-		$params{'text'} = shift;
-	}
-
-	if(!defined($params{'text'})) {
+	if(!defined($params->{'text'})) {
 		Carp::carp(__PACKAGE__, ': no text given');
 		return;
 	}
@@ -166,37 +150,37 @@ sub append {
 	$self->{'file'} = $call_details[1];
 	$self->{'line'} = $call_details[2];
 
-	if(ref($params{'text'})) {
+	if(ref($params->{'text'})) {
 		# Allow the text to be a reference to a list of strings
-		if(ref($params{'text'}) eq 'ARRAY') {
-			if(scalar(@{$params{'text'}}) == 0) {
+		if(ref($params->{'text'}) eq 'ARRAY') {
+			if(scalar(@{$params->{'text'}}) == 0) {
 				Carp::carp(__PACKAGE__, ': no text given');
 				return;
 			}
-			foreach my $text(@{$params{'text'}}) {
+			foreach my $text(@{$params->{'text'}}) {
 				$self = $self->append($text);
 			}
 			return $self;
 		}
-		$params{'text'} = $params{'text'}->as_string();
+		$params->{'text'} = $params->{'text'}->as_string();
 	}
 
 	# FIXME: handle ending with an abbreviation
 
 	if($self->{'text'} && ($self->{'text'} =~ /\s*[\.\,;]\s*$/)) {
-		if($params{'text'} =~ /^\s*[\.\,;]/) {
+		if($params->{'text'} =~ /^\s*[\.\,;]/) {
 			# die(__PACKAGE__,
 			Carp::carp(__PACKAGE__,
 				": attempt to add consecutive punctuation\n\tCurrent = '",
 				$self->{'text'},
 				"' added at $line of $file\n\tAppend = '",
-				$params{'text'},
+				$params->{'text'},
 				"'",
 			);
 			return;
 		}
 	}
-	$self->{'text'} .= $params{'text'};
+	$self->{'text'} .= $params->{'text'};
 
 	return $self;
 }
@@ -338,6 +322,41 @@ sub appendconjunction
 	$self->append(Lingua::Conjunction::conjunction(@_));
 
 	return $self;
+}
+
+# Helper routine to parse the arguments given to a function,
+#	allowing the caller to call the function in anyway that they want
+#	e.g. foo('bar'), foo(arg => 'bar'), foo({ arg => 'bar' }) all mean the same
+#	when called _get_params('arg', @_);
+sub _get_params
+{
+	shift;
+	my $default = shift;
+
+	if(ref($_[0]) eq 'HASH') {
+		# %rc = %{$_[0]};
+		return $_[0];
+	}
+
+	my %rc;
+
+	if((scalar(@_) % 2) == 0) {
+		%rc = @_;
+	} elsif(scalar(@_) == 1) {
+		if(defined($default)) {
+			$rc{$default} = shift;
+		} else {
+			my @c = caller(1);
+			my $func = $c[3];	# calling function name
+			Carp::croak('Usage: ', __PACKAGE__, "->$func()");
+		}
+	} elsif((scalar(@_) == 0) && defined($default)) {
+		my @c = caller(1);
+		my $func = $c[3];	# calling function name
+		Carp::croak('Usage: ', __PACKAGE__, "->$func($default => " . '$val)');
+	}
+
+	return \%rc;
 }
 
 =head1 AUTHOR
