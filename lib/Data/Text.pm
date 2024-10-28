@@ -2,8 +2,10 @@ package Data::Text;
 
 use warnings;
 use strict;
+
 use Carp;
 use Lingua::Conjunction;
+use Scalar::Util;
 use String::Clean;
 use String::Util;
 
@@ -58,8 +60,8 @@ sub new {
 
 		# FIXME: this only works when no arguments are given
 		$self = bless { }, __PACKAGE__;
-	} elsif(ref($class)) {
-		# clone the given object
+	} elsif(Scalar::Util::blessed($class)) {
+		# If $class is an object, clone it with new arguments
 		$self = bless { }, ref($class);
 		return $self->set($class);
 	} else {
@@ -330,30 +332,25 @@ sub appendconjunction
 #	when called _get_params('arg', @_);
 sub _get_params
 {
-	shift;
+	shift;  # Discard the first argument (typically $self)
 	my $default = shift;
 
-	if(ref($_[0]) eq 'HASH') {
-		# %rc = %{$_[0]};
-		return $_[0];
-	}
+	# Directly return hash reference if the first parameter is a hash reference
+	return $_[0] if ref $_[0] eq 'HASH';
 
 	my %rc;
+	my $num_args = scalar @_;
 
-	if((scalar(@_) % 2) == 0) {
+	# Populate %rc based on the number and type of arguments
+	if(($num_args == 1) && (defined $default)) {
+		# %rc = ($default => shift);
+		return { $default => shift };
+	} elsif(($num_args % 2) == 0) {
 		%rc = @_;
-	} elsif(scalar(@_) == 1) {
-		if(defined($default)) {
-			$rc{$default} = shift;
-		} else {
-			my @c = caller(1);
-			my $func = $c[3];	# calling function name
-			Carp::croak('Usage: ', __PACKAGE__, "->$func()");
-		}
-	} elsif((scalar(@_) == 0) && defined($default)) {
-		my @c = caller(1);
-		my $func = $c[3];	# calling function name
-		Carp::croak('Usage: ', __PACKAGE__, "->$func($default => " . '$val)');
+	} elsif($num_args == 1) {
+		Carp::croak('Usage: ', __PACKAGE__, '->', (caller(1))[3], '()');
+	} elsif($num_args == 0 && defined $default) {
+		Carp::croak('Usage: ', __PACKAGE__, '->', (caller(1))[3], '($default => \$val)');
 	}
 
 	return \%rc;
