@@ -22,11 +22,11 @@ Version 0.14
 our $VERSION = '0.14';
 
 use overload (
-        '==' => \&equal,
-        '!=' => \&not_equal,
-        '""' => \&as_string,
-        bool => sub { 1 },
-        fallback => 1   # So that boolean tests don't cause as_string to be called
+	'==' => \&equal,
+	'!=' => \&not_equal,
+	'""' => \&as_string,
+	bool => sub { 1 },
+	fallback => 1	# So that boolean tests don't cause as_string to be called
 );
 
 =head1 SYNOPSIS
@@ -96,9 +96,10 @@ sub set {
 		return;
 	}
 
-	my @call_details = caller(0);
-	$self->{'file'} = $call_details[1];
-	$self->{'line'} = $call_details[2];
+	# my @call_details = caller(0);
+	# $self->{'file'} = $call_details[1];
+	# $self->{'line'} = $call_details[2];
+	@{$self}{'file', 'line'} = (caller(0))[1, 2];
 
 	if(ref($params->{'text'})) {
 		# Allow the text to be a reference to a list of strings
@@ -136,53 +137,47 @@ If called with an object, the message as_string() is sent to it for its contents
 
 =cut
 
-sub append {
+sub append
+{
 	my $self = shift;
 	my $params = $self->_get_params('text', @_);
+	my $text = $params->{'text'};
 
-	if(!defined($params->{'text'})) {
+	# Check if text is provided
+	unless(defined $text) {
 		Carp::carp(__PACKAGE__, ': no text given');
 		return;
 	}
 
-	# Make a note of the caller for ease of debugging
+	# Capture caller information for debugging
 	my $file = $self->{'file'};
 	my $line = $self->{'line'};
-	my @call_details = caller(0);
-	$self->{'file'} = $call_details[1];
-	$self->{'line'} = $call_details[2];
+	# my @call_details = caller(0);
+	# $self->{'file'} = $call_details[1];
+	# $self->{'line'} = $call_details[2];
+	@{$self}{'file', 'line'} = (caller(0))[1, 2];
 
-	if(ref($params->{'text'})) {
-		# Allow the text to be a reference to a list of strings
-		if(ref($params->{'text'}) eq 'ARRAY') {
-			if(scalar(@{$params->{'text'}}) == 0) {
-				Carp::carp(__PACKAGE__, ': no text given');
-				return;
-			}
-			foreach my $text(@{$params->{'text'}}) {
-				$self = $self->append($text);
-			}
+	# Process if text is a reference
+	if(ref $text) {
+		if(ref $text eq 'ARRAY') {
+			return Carp::carp(__PACKAGE__, ': no text given') unless @$text;
+			$self->append($_) for @$text;
 			return $self;
 		}
-		$params->{'text'} = $params->{'text'}->as_string();
+		$text = $text->as_string();
 	}
 
+	# Check for consecutive punctuation
 	# FIXME: handle ending with an abbreviation
-
-	if($self->{'text'} && ($self->{'text'} =~ /\s*[\.\,;]\s*$/)) {
-		if($params->{'text'} =~ /^\s*[\.\,;]/) {
-			# die(__PACKAGE__,
-			Carp::carp(__PACKAGE__,
-				": attempt to add consecutive punctuation\n\tCurrent = '",
-				$self->{'text'},
-				"' added at $line of $file\n\tAppend = '",
-				$params->{'text'},
-				"'",
-			);
-			return;
-		}
+	if($self->{'text'} && $self->{'text'} =~ /\s*[\.,;]\s*$/ && $text =~ /^\s*[\.,;]/) {
+		Carp::carp(__PACKAGE__,
+			": attempt to add consecutive punctuation\n\tCurrent = '", $self->{'text'},
+			"' at $line of $file\n\tAppend = '", $text, "'");
+		return;
 	}
-	$self->{'text'} .= $params->{'text'};
+
+	# Append text
+	$self->{'text'} .= $text;
 
 	return $self;
 }
