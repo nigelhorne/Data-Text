@@ -96,10 +96,10 @@ sub set {
 		return;
 	}
 
-	# my @call_details = caller(0);
-	# $self->{'file'} = $call_details[1];
-	# $self->{'line'} = $call_details[2];
-	@{$self}{'file', 'line'} = (caller(0))[1, 2];
+	# @{$self}{'file', 'line'} = (caller(0))[1, 2];
+	my @call_details = caller(0);
+	$self->{'file'} = $call_details[1];
+	$self->{'line'} = $call_details[2];
 
 	if(ref($params->{'text'})) {
 		# Allow the text to be a reference to a list of strings
