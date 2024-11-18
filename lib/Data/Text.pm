@@ -50,7 +50,7 @@ The optional parameter contains a string, or object, to initialise the object wi
 =cut
 
 sub new {
-	my $class = shift;
+	my ($class, @args) = @_;
 	my $self;
 
 	if(!defined($class)) {
@@ -63,14 +63,14 @@ sub new {
 	} elsif(Scalar::Util::blessed($class)) {
 		# If $class is an object, clone it with new arguments
 		$self = bless { }, ref($class);
-		return $self->set($class);
+		return $self->set($class) if(!scalar(@args));
 	} else {
+		# Create a new object
 		$self = bless { }, $class;
 	}
 
-	if(scalar(@_)) {
-		return $self->set(@_);
-	}
+	# Set additional attributes if arguments are provided
+	$self->set(@args) if(scalar(@args));
 
 	return $self;
 }
