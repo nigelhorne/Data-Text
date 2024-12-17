@@ -54,10 +54,11 @@ sub new {
 	my $self;
 
 	if(!defined($class)) {
-		# Using Data::Text->new(), not Data::Text::new()
-		# carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
-		# return;
-
+		if((scalar @args) > 0) {
+			# Using Data::Text->new(), not Data::Text::new()
+			carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
+			return;
+		}
 		# FIXME: this only works when no arguments are given
 		$self = bless { }, __PACKAGE__;
 	} elsif(Scalar::Util::blessed($class)) {
@@ -72,6 +73,7 @@ sub new {
 	# Set additional attributes if arguments are provided
 	$self->set(@args) if(scalar(@args));
 
+	# Return the blessed object
 	return $self;
 }
 

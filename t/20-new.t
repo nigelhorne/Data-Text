@@ -11,7 +11,6 @@ BEGIN { use_ok('Data::Text') }
 isa_ok(Data::Text->new(), 'Data::Text', 'Creating Data::Text object');
 isa_ok(Data::Text->new()->new(), 'Data::Text', 'Cloning Data::Text object');
 isa_ok(Data::Text::new(), 'Data::Text', 'Creating Data::Text object');
-# ok(!defined(Data::Text::new()));
 
 # Creating a new object without arguments
 my $obj1 = Data::Text->new();
