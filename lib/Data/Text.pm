@@ -171,7 +171,7 @@ sub append
 
 	# Check for consecutive punctuation
 	# FIXME: handle ending with an abbreviation
-	if($self->{'text'} && $self->{'text'} =~ /\s*[\.,;]\s*$/ && $text =~ /^\s*[\.,;]/) {
+	if($self->{'text'} && ($self->{'text'} =~ /\s*[\.,;]\s*$/) && ($text =~ /^\s*[\.,;]/)) {
 		Carp::carp(__PACKAGE__,
 			": attempt to add consecutive punctuation\n\tCurrent = '", $self->{'text'},
 			"' at $line of $file\n\tAppend = '", $text, "'");
