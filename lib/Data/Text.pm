@@ -5,6 +5,7 @@ use strict;
 
 use Carp;
 use Lingua::Conjunction;
+use Params::Get;
 use Scalar::Util;
 use String::Clean;
 use String::Util;
@@ -91,7 +92,7 @@ If called with an object, the message as_string() is sent to it for its contents
 
 sub set {
 	my $self = shift;
-	my $params = $self->_get_params('text', @_);
+	my $params = Params::Get::get_params('text', @_);
 
 	if(!defined($params->{'text'})) {
 		Carp::carp(__PACKAGE__, ': no text given');
@@ -142,7 +143,7 @@ If called with an object, the message as_string() is sent to it for its contents
 sub append
 {
 	my $self = shift;
-	my $params = $self->_get_params('text', @_);
+	my $params = Params::Get::get_params('text', @_);
 	my $text = $params->{'text'};
 
 	# Check if text is provided
@@ -321,36 +322,6 @@ sub appendconjunction
 	$self->append(Lingua::Conjunction::conjunction(@_));
 
 	return $self;
-}
-
-# Helper routine to parse the arguments given to a function,
-#	allowing the caller to call the function in anyway that they want
-#	e.g. foo('bar'), foo(arg => 'bar'), foo({ arg => 'bar' }) all mean the same
-#	when called _get_params('arg', @_);
-sub _get_params
-{
-	shift;  # Discard the first argument (typically $self)
-	my $default = shift;
-
-	# Directly return hash reference if the first parameter is a hash reference
-	return $_[0] if ref $_[0] eq 'HASH';
-
-	my %rc;
-	my $num_args = scalar @_;
-
-	# Populate %rc based on the number and type of arguments
-	if(($num_args == 1) && (defined $default)) {
-		# %rc = ($default => shift);
-		return { $default => shift };
-	} elsif($num_args == 1) {
-		Carp::croak('Usage: ', __PACKAGE__, '->', (caller(1))[3], '()');
-	} elsif($num_args == 0 && defined $default) {
-		Carp::croak('Usage: ', __PACKAGE__, '->', (caller(1))[3], '($default => \$val)');
-	} elsif(($num_args % 2) == 0) {
-		%rc = @_;
-	}
-
-	return \%rc;
 }
 
 =head1 AUTHOR

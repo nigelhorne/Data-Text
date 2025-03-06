@@ -2,7 +2,7 @@ Revision history for Data::Text
 
 0.15
 	Use Test::DescribeMe
-	Refactor _get_params
+	Use Params::Get
 	Added t/30-basics.t
 
 0.14	Tue Jul  9 10:01:32 EDT 2024
