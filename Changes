@@ -1,6 +1,6 @@
 Revision history for Data::Text
 
-0.15
+0.15	Thu Apr 10 07:41:32 EDT 2025
 	Use Test::DescribeMe
 	Use Params::Get
 	Added t/30-basics.t
