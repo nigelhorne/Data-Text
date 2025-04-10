@@ -31,8 +31,8 @@ WriteMakefile(
 		'Test::Most' => 0,
 		'Test::NoWarnings' => 0,
 		'Test::Needs' => 0,
-		'Test::Requires' => 0,	# Actually only if AUTHOR_TESTING is set
-		'Test::Warn' => 0
+		# 'Test::Requires' => 0,	# Actually only if AUTHOR_TESTING is set
+		# 'Test::Warn' => 0
 	}, PREREQ_PM => {
 		'Carp' => 0,
 		'Lingua::Conjunction' => 0,
