@@ -161,10 +161,10 @@ sub append
 	@{$self}{'file', 'line'} = (caller(0))[1, 2];
 
 	# Process if text is a reference
-	if(ref $text) {
-		if(ref $text eq 'ARRAY') {
-			return Carp::carp(__PACKAGE__, ': no text given') unless @$text;
-			$self->append($_) for @$text;
+	if(ref($text)) {
+		if(ref($text) eq 'ARRAY') {
+			return Carp::carp(__PACKAGE__, ': no text given') unless @{$text};
+			$self->append($_) for @{$text};
 			return $self;
 		}
 		$text = $text->as_string();

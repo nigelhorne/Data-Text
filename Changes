@@ -1,5 +1,8 @@
 Revision history for Data::Text
 
+0.16
+	Handle the latest version of Params::Get
+
 0.15	Thu Apr 10 07:41:32 EDT 2025
 	Use Test::DescribeMe
 	Use Params::Get
