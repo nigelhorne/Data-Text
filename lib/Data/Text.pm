@@ -32,15 +32,13 @@ use overload (
 
 =head1 DESCRIPTION
 
-C<Data::Tex>t provides an object-oriented interface for managing and manipulating text content in Perl.
+C<Data::Text> provides an object-oriented interface for managing and manipulating text content in Perl.
 It wraps string operations in a class-based structure,
 enabling clean chaining of methods like appending, trimming, replacing words, and joining text with conjunctions.
 It supports flexible input types—including strings, arrays, and other C<Data::Text> objects,
 and overloads common operators to allow intuitive comparisons and stringification.
 
 =head1 SYNOPSIS
-
-Handle text in an OO way.
 
     use Data::Text;
 
@@ -189,6 +187,22 @@ sub append
 
 	# Append text
 	$self->{'text'} .= $text;
+
+	return $self;
+}
+
+=head2 clear
+
+Clears the text and resets internal state.
+
+    $d->clear();
+
+=cut
+
+sub clear {
+	my $self = shift;
+
+	delete @$self{qw(text file line clean)};
 
 	return $self;
 }

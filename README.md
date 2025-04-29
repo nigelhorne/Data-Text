@@ -8,15 +8,13 @@ Version 0.15
 
 # DESCRIPTION
 
-`Data::Tex`t provides an object-oriented interface for managing and manipulating text content in Perl.
+`Data::Text` provides an object-oriented interface for managing and manipulating text content in Perl.
 It wraps string operations in a class-based structure,
 enabling clean chaining of methods like appending, trimming, replacing words, and joining text with conjunctions.
 It supports flexible input types—including strings, arrays, and other `Data::Text` objects,
 and overloads common operators to allow intuitive comparisons and stringification.
 
 # SYNOPSIS
-
-Handle text in an OO way.
 
     use Data::Text;
 
@@ -54,6 +52,12 @@ Successive calls to append() can be daisy chained.
 
 The argument can be a reference to an array of strings, or an object.
 If called with an object, the message as\_string() is sent to it for its contents.
+
+## clear
+
+Clears the text and resets internal state.
+
+    $d->clear();
 
 ## equal
 
