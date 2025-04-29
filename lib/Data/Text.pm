@@ -35,7 +35,8 @@ use overload (
 C<Data::Text> provides an object-oriented interface for managing and manipulating text content in Perl.
 It wraps string operations in a class-based structure,
 enabling clean chaining of methods like appending, trimming, replacing words, and joining text with conjunctions.
-It supports flexible input types—including strings, arrays, and other C<Data::Text> objects,
+It supports flexible input types,
+including strings, arrays, and other C<Data::Text> objects,
 and overloads common operators to allow intuitive comparisons and stringification.
 
 =head1 SYNOPSIS
@@ -190,6 +191,39 @@ sub append
 
 	return $self;
 }
+
+=head2 uppercase
+
+Converts the text to uppercase.
+
+    $d->uppercase();
+
+=cut
+
+sub uppercase {
+	my $self = shift;
+
+	$self->{'text'} = uc($self->{'text'}) if(defined($self->{'text'}));
+
+	return $self;
+}
+
+=head2 lowercase
+
+Converts the text to lowercase.
+
+    $d->lowercase();
+
+=cut
+
+sub lowercase {
+	my $self = shift;
+
+	$self->{'text'} = lc($self->{'text'}) if(defined($self->{'text'}));
+
+	return $self;
+}
+
 
 =head2 clear
 

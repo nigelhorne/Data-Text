@@ -11,7 +11,8 @@ Version 0.15
 `Data::Text` provides an object-oriented interface for managing and manipulating text content in Perl.
 It wraps string operations in a class-based structure,
 enabling clean chaining of methods like appending, trimming, replacing words, and joining text with conjunctions.
-It supports flexible input types—including strings, arrays, and other `Data::Text` objects,
+It supports flexible input types,
+including strings, arrays, and other `Data::Text` objects,
 and overloads common operators to allow intuitive comparisons and stringification.
 
 # SYNOPSIS
@@ -52,6 +53,18 @@ Successive calls to append() can be daisy chained.
 
 The argument can be a reference to an array of strings, or an object.
 If called with an object, the message as\_string() is sent to it for its contents.
+
+## uppercase
+
+Converts the text to uppercase.
+
+    $d->uppercase();
+
+## lowercase
+
+Converts the text to lowercase.
+
+    $d->lowercase();
 
 ## clear
 
@@ -154,11 +167,3 @@ You can also look for information at:
 Copyright 2021-2025 Nigel Horne.
 
 This program is released under the following licence: GPL2
-
-# POD ERRORS
-
-Hey! **The above document had some coding errors, which are explained below:**
-
-- Around line 38:
-
-    Non-ASCII character seen before =encoding in 'types—including'. Assuming UTF-8
