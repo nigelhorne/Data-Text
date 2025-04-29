@@ -6,6 +6,14 @@ Data::Text - Class to handle text in an OO way
 
 Version 0.15
 
+# DESCRIPTION
+
+`Data::Tex`t provides an object-oriented interface for managing and manipulating text content in Perl.
+It wraps string operations in a class-based structure,
+enabling clean chaining of methods like appending, trimming, replacing words, and joining text with conjunctions.
+It supports flexible input types—including strings, arrays, and other `Data::Text` objects,
+and overloads common operators to allow intuitive comparisons and stringification.
+
 # SYNOPSIS
 
 Handle text in an OO way.
@@ -142,3 +150,11 @@ You can also look for information at:
 Copyright 2021-2025 Nigel Horne.
 
 This program is released under the following licence: GPL2
+
+# POD ERRORS
+
+Hey! **The above document had some coding errors, which are explained below:**
+
+- Around line 38:
+
+    Non-ASCII character seen before =encoding in 'types—including'. Assuming UTF-8

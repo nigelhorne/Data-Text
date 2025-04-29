@@ -30,6 +30,14 @@ use overload (
 	fallback => 1	# So that boolean tests don't cause as_string to be called
 );
 
+=head1 DESCRIPTION
+
+C<Data::Tex>t provides an object-oriented interface for managing and manipulating text content in Perl.
+It wraps string operations in a class-based structure,
+enabling clean chaining of methods like appending, trimming, replacing words, and joining text with conjunctions.
+It supports flexible input types—including strings, arrays, and other C<Data::Text> objects,
+and overloads common operators to allow intuitive comparisons and stringification.
+
 =head1 SYNOPSIS
 
 Handle text in an OO way.
