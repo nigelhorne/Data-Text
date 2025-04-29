@@ -224,7 +224,6 @@ sub lowercase {
 	return $self;
 }
 
-
 =head2 clear
 
 Clears the text and resets internal state.
