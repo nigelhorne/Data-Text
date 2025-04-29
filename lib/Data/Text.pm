@@ -342,9 +342,11 @@ Replaces multiple words in the text.
 sub replace {
 	my ($self, $replacements) = @_;
 
-	foreach my $search (keys %$replacements) {
-		my $replace = $replacements->{$search};
-		$self->{'text'} =~ s/\b\Q$search\E\b/$replace/g;
+	if($self->{'text'} && (ref($replacements) eq 'HASH')) {
+		foreach my $search (keys %$replacements) {
+			my $replace = $replacements->{$search};
+			$self->{'text'} =~ s/\b\Q$search\E\b/$replace/g;
+		}
 	}
 
 	return $self;

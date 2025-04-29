@@ -30,4 +30,15 @@ $dt->set('Text stays the same');
 $dt->replace({});
 is($dt->as_string(), 'Text stays the same', 'No replacements with empty hash');
 
+$dt = Data::Text->new();
+
+# Test replace on undef text
+ok($dt->replace({ 'Hello' => 'Hi' }), 'replace() on undef does not die');
+is($dt->as_string, undef, 'Text remains undef after replace');
+
+# Test mixed replacements with punctuation and word boundaries
+$dt->set('file.txt is not filex.txt');
+$dt->replace({ 'file.txt' => 'document.txt' });
+is($dt->as_string, 'document.txt is not filex.txt', 'No partial replacements on word boundaries');
+
 done_testing();
