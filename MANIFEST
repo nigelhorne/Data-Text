@@ -35,6 +35,7 @@ t/pod-spelling.t
 t/pod-synopsis.t
 t/pod.t
 t/port.t
+t/replace.t
 t/strict.t
 t/unused.t
 t/vars.t

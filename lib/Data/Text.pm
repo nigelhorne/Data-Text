@@ -7,7 +7,6 @@ use Carp;
 use Lingua::Conjunction;
 use Params::Get;
 use Scalar::Util;
-use String::Clean;
 use String::Util;
 
 =head1 NAME
@@ -330,26 +329,22 @@ sub rtrim {
 	return $self;
 }
 
-=head2	replace
+=head2 replace
 
-Replaces words.
+Replaces multiple words in the text.
 
-    use Data::Text;
-
-    my $dt = Data::Text->new();
     $dt->append('Hello World');
-    $dt->replace({ 'Hello' => 'Goodbye dear' });
+    $dt->replace({ 'Hello' => 'Goodbye', 'World' => 'Universe' });
     print $dt->as_string(), "\n";	# Outputs "Goodbye dear world"
 
 =cut
 
 sub replace {
-	my $self = shift;
+	my ($self, $replacements) = @_;
 
-	# avoid assert failure in String::Clean
-	if($self->{'text'}) {
-		$self->{'clean'} ||= String::Clean->new();
-		$self->{'text'} = $self->{'clean'}->replace(shift, $self->{'text'}, shift);
+	foreach my $search (keys %$replacements) {
+		my $replace = $replacements->{$search};
+		$self->{'text'} =~ s/\b\Q$search\E\b/$replace/g;
 	}
 
 	return $self;
@@ -389,7 +384,7 @@ There is no Unicode or UTF-8 support.
 
 =head1 SEE ALSO
 
-L<String::Clean>, L<String::Util>, L<Lingua::String>
+L<String::Util>, L<Lingua::String>
 
 =head1 SUPPORT
 

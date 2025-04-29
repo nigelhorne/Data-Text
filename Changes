@@ -3,6 +3,7 @@ Revision history for Data::Text
 0.16
 	Handle the latest version of Params::Get
 	Added clear(), uppercase() and lowercase()
+	Refactor replace() to allow more than one replacement per call
 
 0.15	Thu Apr 10 07:41:32 EDT 2025
 	Use Test::DescribeMe
