@@ -4,7 +4,7 @@ Data::Text - Class to handle text in an OO way
 
 # VERSION
 
-Version 0.15
+Version 0.16
 
 # DESCRIPTION
 
@@ -106,13 +106,10 @@ Removes trailing spaces from the text.
 
 ## replace
 
-Replaces words.
+Replaces multiple words in the text.
 
-    use Data::Text;
-
-    my $dt = Data::Text->new();
     $dt->append('Hello World');
-    $dt->replace({ 'Hello' => 'Goodbye dear' });
+    $dt->replace({ 'Hello' => 'Goodbye', 'World' => 'Universe' });
     print $dt->as_string(), "\n";       # Outputs "Goodbye dear world"
 
 ## appendconjunction
@@ -138,7 +135,7 @@ There is no Unicode or UTF-8 support.
 
 # SEE ALSO
 
-[String::Clean](https://metacpan.org/pod/String%3A%3AClean), [String::Util](https://metacpan.org/pod/String%3A%3AUtil), [Lingua::String](https://metacpan.org/pod/Lingua%3A%3AString)
+[String::Util](https://metacpan.org/pod/String%3A%3AUtil), [Lingua::String](https://metacpan.org/pod/Lingua%3A%3AString)
 
 # SUPPORT
 
