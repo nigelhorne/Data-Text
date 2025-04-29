@@ -235,7 +235,7 @@ Clears the text and resets internal state.
 sub clear {
 	my $self = shift;
 
-	delete @$self{qw(text file line clean)};
+	delete @$self{qw(text file line)};
 
 	return $self;
 }

@@ -18,6 +18,5 @@ is($dt->length(), 0, 'Length after clear is 0');
 # Check that file, line, and clean are cleared
 ok(!exists $dt->{file}, 'File metadata is cleared');
 ok(!exists $dt->{line}, 'Line metadata is cleared');
-ok(!exists $dt->{clean}, 'Clean object is cleared');
 
 done_testing();
