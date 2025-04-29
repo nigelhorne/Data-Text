@@ -386,11 +386,15 @@ Nigel Horne, C<< <njh at bandsman.co.uk> >>
 
 =head1 BUGS
 
+There is no Unicode or UTF-8 support.
+
 =head1 SEE ALSO
 
 L<String::Clean>, L<String::Util>, L<Lingua::String>
 
 =head1 SUPPORT
+
+This module is provided as-is without any warranty.
 
 You can find documentation for this module with the perldoc command.
 

@@ -134,11 +134,15 @@ Nigel Horne, `<njh at bandsman.co.uk>`
 
 # BUGS
 
+There is no Unicode or UTF-8 support.
+
 # SEE ALSO
 
 [String::Clean](https://metacpan.org/pod/String%3A%3AClean), [String::Util](https://metacpan.org/pod/String%3A%3AUtil), [Lingua::String](https://metacpan.org/pod/Lingua%3A%3AString)
 
 # SUPPORT
+
+This module is provided as-is without any warranty.
 
 You can find documentation for this module with the perldoc command.
 
