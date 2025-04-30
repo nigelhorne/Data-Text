@@ -1,5 +1,8 @@
 Revision history for Data::Text
 
+0.17
+	Fixed example - thanks to RSAVAGE
+
 0.16	Tue Apr 29 12:21:49 EDT 2025
 	Handle the latest version of Params::Get
 	Added clear(), uppercase() and lowercase()

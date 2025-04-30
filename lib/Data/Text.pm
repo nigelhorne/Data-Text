@@ -335,7 +335,7 @@ Replaces multiple words in the text.
 
     $dt->append('Hello World');
     $dt->replace({ 'Hello' => 'Goodbye', 'World' => 'Universe' });
-    print $dt->as_string(), "\n";	# Outputs "Goodbye dear world"
+    print $dt->as_string(), "\n";	# Outputs "Goodbye Universe"
 
 =cut
 
@@ -343,7 +343,7 @@ sub replace {
 	my ($self, $replacements) = @_;
 
 	if($self->{'text'} && (ref($replacements) eq 'HASH')) {
-		foreach my $search (keys %$replacements) {
+		foreach my $search (keys %{$replacements}) {
 			my $replace = $replacements->{$search};
 			$self->{'text'} =~ s/\b\Q$search\E\b/$replace/g;
 		}
