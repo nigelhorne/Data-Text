@@ -4,6 +4,8 @@
 # Note - String::Util requires 5.14 or above
 
 name: Test Code on Ubuntu
+permissions:
+  contents: read
 on:
   push:
     branches:

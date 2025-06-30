@@ -1,5 +1,7 @@
 ---
 # see https://github.com/FGasper/perl-github-action-tips
+permissions:
+  contents: read
 
 name: Test Code on Ubuntu on ARM32
 on:
