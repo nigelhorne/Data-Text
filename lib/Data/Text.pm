@@ -101,7 +101,7 @@ sub set {
 	my $params = Params::Get::get_params('text', @_);
 
 	if(!defined($params->{'text'})) {
-		Carp::carp(__PACKAGE__, ': no text given');
+		Carp::carp(__PACKAGE__, ': no text given to set()');
 		return;
 	}
 
@@ -154,7 +154,7 @@ sub append
 
 	# Check if text is provided
 	unless(defined $text) {
-		Carp::carp(__PACKAGE__, ': no text given');
+		Carp::carp(__PACKAGE__, ': no text given to append()');
 		return;
 	}
 
