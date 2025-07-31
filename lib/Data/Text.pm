@@ -15,11 +15,11 @@ Data::Text - Class to handle text in an OO way
 
 =head1 VERSION
 
-Version 0.16
+Version 0.17
 
 =cut
 
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 use overload (
 	'==' => \&equal,
@@ -216,7 +216,7 @@ Converts the text to lowercase.
 =cut
 
 sub lowercase {
-	my $self = shift;
+	my $self = $_[0];
 
 	$self->{'text'} = lc($self->{'text'}) if(defined($self->{'text'}));
 
