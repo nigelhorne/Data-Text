@@ -15,7 +15,7 @@ WriteMakefile(
 	NAME		=> 'Data::Text',
 	AUTHOR		=> q{Nigel Horne <njh@bandsman.co.uk>},
 	VERSION_FROM	=> 'lib/Data/Text.pm',
-	ABSTRACT_FROM	   => 'lib/Data/Text.pm',
+	ABSTRACT_FROM	=> 'lib/Data/Text.pm',
 	((defined($ExtUtils::MakeMaker::VERSION) &&
 	 ($ExtUtils::MakeMaker::VERSION >= 6.3002))
 	  ? ('LICENSE'=> 'GPL')
@@ -35,7 +35,7 @@ WriteMakefile(
 		'Carp' => 0,
 		'Lingua::Conjunction' => 0,
 		'overload' => 0,
-		'Params::Get' => 0,
+		'Params::Get' => 0.12,
 		'Scalar::Util' => 0,
 		'String::Util' => 0
 	}, dist => $dist,
