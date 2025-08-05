@@ -5,7 +5,7 @@ use strict;
 
 use Carp;
 use Lingua::Conjunction;
-use Params::Get 0.12;
+use Params::Get 0.13;
 use Scalar::Util;
 use String::Util;
 

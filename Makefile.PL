@@ -35,7 +35,7 @@ WriteMakefile(
 		'Carp' => 0,
 		'Lingua::Conjunction' => 0,
 		'overload' => 0,
-		'Params::Get' => 0.12,
+		'Params::Get' => 0.13,
 		'Scalar::Util' => 0,
 		'String::Util' => 0
 	}, dist => $dist,
