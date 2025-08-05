@@ -169,7 +169,10 @@ sub append
 	# Process if text is a reference
 	if(ref($text)) {
 		if(ref($text) eq 'ARRAY') {
-			return Carp::carp(__PACKAGE__, ': no text given') unless @{$text};
+			unless(@{$text}) {
+				Carp::carp(__PACKAGE__, ': no text given');
+				return
+			}
 			$self->append($_) for @{$text};
 			return $self;
 		}

@@ -102,20 +102,20 @@ DATA: {
 		qr/no text given/
 	);
 
-	does_carp_that_matches(
+	does_croak_that_matches(
 		sub {
 			$d = new_ok('Data::Text');
 			$d->set([]);
 		},
-		qr/no text given/
+		qr/Usage:\s/
 	);
 
-	does_carp_that_matches(
+	does_croak_that_matches(
 		sub {
 			$d = new_ok('Data::Text');
 			$d->append([]);
 		},
-		qr/no text given/
+		qr/Usage:\s/
 	);
 
 	does_croak_that_matches(
