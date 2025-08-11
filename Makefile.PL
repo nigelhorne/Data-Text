@@ -33,6 +33,7 @@ WriteMakefile(
 		'Test::Needs' => 0
 	}, PREREQ_PM => {
 		'Carp' => 0,
+		'Encode' => 0,
 		'Lingua::Conjunction' => 0,
 		'overload' => 0,
 		'Params::Get' => 0.13,

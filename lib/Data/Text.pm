@@ -4,10 +4,12 @@ use warnings;
 use strict;
 
 use Carp;
+use Encode;
 use Lingua::Conjunction;
 use Params::Get 0.13;
 use Scalar::Util;
 use String::Util;
+use utf8;
 
 =head1 NAME
 
@@ -292,6 +294,8 @@ sub as_string {
 
 Returns the length of the text.
 
+This is actually the number of characters, not the number of bytes.
+
 =cut
 
 sub length {
@@ -301,7 +305,11 @@ sub length {
 		return 0;
 	}
 
-	return length($self->{'text'});
+	my $copy = $self->{'text'};
+
+	Encode::_utf8_on($copy);
+
+	return length($copy);
 }
 
 =head2	trim
