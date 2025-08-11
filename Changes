@@ -1,6 +1,6 @@
 Revision history for Data::Text
 
-0.18
+0.18	Mon Aug 11 11:24:22 EDT 2025
 	Bump the version of Params::Get
 	Ensure length(), uppercase() and lowercase() do what you expect with UTF-8 characters
 	Don't break chaining on appending consecutive punctuation
