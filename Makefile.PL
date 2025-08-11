@@ -53,9 +53,10 @@ WriteMakefile(
 				web => 'https://github.com/nigelhorne/Data-Text',
 				repository => 'https://github.com/nigelhorne/Data-Text',
 			}, bugtracker => {
-				# web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Text',
-				web => 'https://github.com/nigelhorne/Data-Text/issues',
-				url => 'https://github.com/nigelhorne/Data-Text/issues',
+				web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Text',
+				url => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Text',
+				# web => 'https://github.com/nigelhorne/Data-Text/issues',
+				# url => 'https://github.com/nigelhorne/Data-Text/issues',
 				mailto => 'bug-Data-Text@rt.cpan.org'
 			}
 		},

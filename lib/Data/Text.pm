@@ -347,9 +347,9 @@ sub rtrim {
 
 Replaces multiple words in the text.
 
-    $dt->append('Hello World');
-    $dt->replace({ 'Hello' => 'Goodbye', 'World' => 'Universe' });
-    print $dt->as_string(), "\n";	# Outputs "Goodbye Universe"
+    $d->append('Hello World');
+    $d->replace({ 'Hello' => 'Goodbye', 'World' => 'Universe' });
+    print $d->as_string(), "\n";	# Outputs "Goodbye Universe"
 
 =cut
 
