@@ -117,7 +117,7 @@ sub set {
 		if(ref($params->{'text'}) eq 'ARRAY') {
 			if(scalar(@{$params->{'text'}}) == 0) {
 				Carp::carp(__PACKAGE__, ': no text given');
-				return;
+				return $self;
 			}
 			delete $self->{'text'};
 			foreach my $text(@{$params->{'text'}}) {
@@ -187,11 +187,10 @@ sub append
 		Carp::carp(__PACKAGE__,
 			": attempt to add consecutive punctuation\n\tCurrent = '", $self->{'text'},
 			"' at $line of $file\n\tAppend = '", $text, "'");
-		return;
+	} else {
+		# Append text
+		$self->{'text'} .= $text;
 	}
-
-	# Append text
-	$self->{'text'} .= $text;
 
 	return $self;
 }
@@ -207,7 +206,9 @@ Converts the text to uppercase.
 sub uppercase {
 	my $self = shift;
 
+	Encode::_utf8_on($self->{'text'});	# Ensure characters like é are converted to É
 	$self->{'text'} = uc($self->{'text'}) if(defined($self->{'text'}));
+	Encode::_utf8_off($self->{'text'});
 
 	return $self;
 }
@@ -223,7 +224,9 @@ Converts the text to lowercase.
 sub lowercase {
 	my $self = $_[0];
 
+	Encode::_utf8_on($self->{'text'});	# Ensure characters like é are converted to É
 	$self->{'text'} = lc($self->{'text'}) if(defined($self->{'text'}));
+	Encode::_utf8_off($self->{'text'});
 
 	return $self;
 }

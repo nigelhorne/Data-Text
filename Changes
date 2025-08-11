@@ -2,7 +2,8 @@ Revision history for Data::Text
 
 0.18
 	Bump the version of Params::Get
-	Ensure length() returns the number of characters, not the number of bytes
+	Ensure length(), uppercase() and lowercase() do what you expect with UTF-8 characters
+	Don't break chaining on appending consecutive punctuation
 
 0.17	Wed Jul 30 20:56:36 EDT 2025
 	Fixed example - thanks to RSAVAGE
