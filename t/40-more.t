@@ -5,9 +5,9 @@ use warnings;
 use Test::Most;
 
 BEGIN {
-	$ENV{'LC_ALL'} = 'en_GB';
+	$ENV{'LC_ALL'} = 'en_GB';	# RT#168965
 	$ENV{'LANGUAGE'} = 'en';
-	use_ok('Data::Text')
+	use_ok('Data::Text');
 }
 
 # Test object creation and basic functionality
@@ -44,12 +44,12 @@ subtest 'Edge cases and error handling' => sub {
 	warning_like { $dt->set(text => []) } qr/no text given/, 'Warning on empty array';
 
 	# Consecutive punctuation
-	$dt->set("Hello.");
-	warning_like { $dt->append(".") } qr/consecutive punctuation/, "Consecutive punctuation warning";
+	$dt->set('Hello.');
+	warning_like { $dt->append('.') } qr/consecutive punctuation/, 'Consecutive punctuation warning';
 
 	# Non-string objects
 	my $obj = bless {}, 'TestClass';
-	dies_ok { $dt->set($obj) } "Dies with object lacking as_string method";
+	dies_ok { $dt->set($obj) } 'Dies with object lacking as_string method';
 };
 
 subtest 'Unicode and encoding tests' => sub {
