@@ -4,7 +4,11 @@ use warnings;
 
 use Test::Most;
 
-BEGIN { use_ok('Data::Text') }
+BEGIN {
+	$ENV{'LC_ALL'} = 'en_GB';
+	$ENV{'LANGUAGE'} = 'en';
+	use_ok('Data::Text')
+}
 
 # Test object creation and basic functionality
 subtest 'Constructor tests' => sub {
@@ -110,7 +114,7 @@ subtest 'Operator overloading tests' => sub {
 
 subtest 'Boundary conditions' => sub {
 	# Very long strings
-	my $long_string = "x" x 100000;
+	my $long_string = 'x' x 100000;
 	my $dt = Data::Text->new($long_string);
 	is($dt->length(), 100000, "Very long string handling");
 
@@ -124,12 +128,9 @@ subtest 'Boundary conditions' => sub {
 };
 
 subtest 'Conjunction functionality' => sub {
-	delete local $ENV{'LC_ALL'};
-	local $ENV{'LANGUAGE'} = 'en';
-
 	my $dt = new_ok('Data::Text');
 	my $result = $dt->appendconjunction('apple', 'banana', 'cherry');
-	like($result->as_string(), qr/apple.*and.*cherry/, "Conjunction formatting");
+	like($result->as_string(), qr/apple.*and.*cherry/, 'Conjunction formatting');
 
 	# Test with Data::Text objects
 	my $a = Data::Text->new('red');
@@ -137,7 +138,7 @@ subtest 'Conjunction functionality' => sub {
 	my $c = Data::Text->new('blue');
 
 	my $colors = Data::Text->new()->appendconjunction($a, $b, $c);
-	like($colors->as_string(), qr/red.*green.*and.*blue/, "Object conjunction");
+	like($colors->as_string(), qr/red.*green.*and.*blue/, 'Object conjunction');
 };
 
 done_testing();
