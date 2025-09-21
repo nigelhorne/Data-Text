@@ -35,6 +35,7 @@ WriteMakefile(
 		'Carp' => 0,
 		'Encode' => 0,
 		'Lingua::Conjunction' => 0,
+		'Object::Configure' => 0.15,
 		'overload' => 0,
 		'Params::Get' => 0.13,
 		'Scalar::Util' => 0,

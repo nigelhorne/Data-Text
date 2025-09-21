@@ -6,6 +6,7 @@ use strict;
 use Carp;
 use Encode;
 use Lingua::Conjunction;
+use Object::Configure 0.15;
 use Params::Get 0.13;
 use Scalar::Util;
 use String::Util;
@@ -59,11 +60,19 @@ The optional parameter contains a string, or object, to initialise the object wi
 =cut
 
 sub new {
-	my ($class, @args) = @_;
+	my $class = shift;
 	my $self;
+	my $params;
+
+	if(scalar(@_) == 1) {
+		# Just one parameter - the text to initialize with
+		$params = Params::Get::get_params('text', \@_);
+	} else {
+		$params = Params::Get::get_params(undef, \@_) || {};
+	}
 
 	if(!defined($class)) {
-		if((scalar @args) > 0) {
+		if((scalar keys %{$params}) > 0) {
 			# Using Data::Text->new(), not Data::Text::new()
 			carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
 			return;
@@ -73,14 +82,16 @@ sub new {
 	} elsif(Scalar::Util::blessed($class)) {
 		# If $class is an object, clone it with new arguments
 		$self = bless { }, ref($class);
-		return $self->set($class) if(!scalar(@args));
+		return $self->set($class) if(!scalar keys %{$params});
 	} else {
 		# Create a new object
 		$self = bless { }, $class;
 	}
 
+	$params = Object::Configure::configure($class, $params);
+
 	# Set additional attributes if arguments are provided
-	$self->set(@args) if(scalar(@args));
+	$self->set($params) if($params->{'text'});
 
 	# Return the blessed object
 	return $self;
@@ -184,6 +195,10 @@ sub append
 	# Check for consecutive punctuation
 	# FIXME: handle ending with an abbreviation
 	if($self->{'text'} && ($self->{'text'} =~ /\s*[\.,;]\s*$/) && ($text =~ /^\s*[\.,;]/)) {
+		if(my $logger = $self->{'logger'}) {
+			$logger->warn(": attempt to add consecutive punctuation\n\tCurrent = '" . $self->{'text'} .
+			"' at $line of $file\n\tAppend = '", $text, "'");
+		}
 		Carp::carp(__PACKAGE__,
 			": attempt to add consecutive punctuation\n\tCurrent = '", $self->{'text'},
 			"' at $line of $file\n\tAppend = '", $text, "'");
