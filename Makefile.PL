@@ -25,6 +25,7 @@ WriteMakefile(
 	'INC' => '',     # e.g., '-I/usr/include/other'
 	PL_FILES	=> {},
 	TEST_REQUIRES => {
+		'Data::Random' => 0,
 		'Test::Carp' => 0,
 		'Test::Compile' => 0,
 		'Test::DescribeMe' => 0,
