@@ -6,7 +6,7 @@ use strict;
 use Carp;
 use Encode;
 use Lingua::Conjunction;
-use Object::Configure 0.15;
+use Object::Configure 0.16;
 use Params::Get 0.13;
 use Scalar::Util;
 use String::Util;
@@ -407,7 +407,7 @@ sub appendconjunction
 
 =head1 AUTHOR
 
-Nigel Horne, C<< <njh at bandsman.co.uk> >>
+Nigel Horne, C<< <njh at nigelhorne.com> >>
 
 =head1 BUGS
 
