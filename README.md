@@ -137,7 +137,8 @@ There is no Unicode or UTF-8 support.
 
 # SEE ALSO
 
-[String::Util](https://metacpan.org/pod/String%3A%3AUtil), [Lingua::String](https://metacpan.org/pod/Lingua%3A%3AString)
+- Test coverage report: [https://nigelhorne.github.io/CGI-Info/coverage/](https://nigelhorne.github.io/CGI-Info/coverage/)
+- [String::Util](https://metacpan.org/pod/String%3A%3AUtil), [Lingua::String](https://metacpan.org/pod/Lingua%3A%3AString)
 
 # SUPPORT
 

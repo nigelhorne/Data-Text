@@ -415,7 +415,13 @@ There is no Unicode or UTF-8 support.
 
 =head1 SEE ALSO
 
-L<String::Util>, L<Lingua::String>
+=over 4
+
+=item * Test coverage report: L<https://nigelhorne.github.io/CGI-Info/coverage/>
+
+=item * L<String::Util>, L<Lingua::String>
+
+=back
 
 =head1 SUPPORT
 
