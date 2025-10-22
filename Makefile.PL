@@ -34,6 +34,7 @@ WriteMakefile(
 		'Test::Needs' => 0,
 		'Test::Returns' => 0
 	}, PREREQ_PM => {
+		'IPC::System::Simple' => 0,
 		'Carp' => 0,
 		'Encode' => 0,
 		'Lingua::Conjunction' => 0,
