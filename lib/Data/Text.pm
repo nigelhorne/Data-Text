@@ -28,6 +28,7 @@ use overload (
 	'==' => \&equal,
 	'!=' => \&not_equal,
 	'""' => \&as_string,
+	# bool => sub { defined $_[0] && defined $_[0]->{'text'} && length $_[0]->{'text'} },
 	bool => sub { 1 },
 	fallback => 1	# So that boolean tests don't cause as_string to be called
 );
@@ -55,7 +56,7 @@ and overloads common operators to allow intuitive comparisons and stringificatio
 
 Creates a Data::Text object.
 
-The optional parameter contains a string, or object, to initialise the object with.
+The optional parameter contains a string or object to initialise the object with.
 
 =cut
 
@@ -244,7 +245,7 @@ sub lowercase {
 
 =head2 clear
 
-Clears the text and resets internal state.
+Clears the text and resets the internal state.
 
     $d->clear();
 
@@ -407,7 +408,7 @@ Nigel Horne, C<< <njh at nigelhorne.com> >>
 
 =head1 BUGS
 
-There is no Unicode or UTF-8 support.
+There is limited Unicode or UTF-8 support.
 
 =head1 SEE ALSO
 
