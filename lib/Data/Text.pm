@@ -72,12 +72,8 @@ sub new {
 	}
 
 	if(!defined($class)) {
-		if((scalar keys %{$params}) > 0) {
-			# Using Data::Text->new(), not Data::Text::new()
-			carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
-			return;
-		}
-		# FIXME: this only works when no arguments are given
+		# Using Data::Text->new(), not Data::Text::new()
+		# This only works when no arguments are given
 		$self = bless { }, __PACKAGE__;
 	} elsif(Scalar::Util::blessed($class)) {
 		# If $class is an object, clone it with new arguments
@@ -417,7 +413,7 @@ There is no Unicode or UTF-8 support.
 
 =over 4
 
-=item * Test coverage report: L<https://nigelhorne.github.io/CGI-Info/coverage/>
+=item * Test coverage report: L<https://nigelhorne.github.io/Data-Text/coverage/>
 
 =item * L<String::Util>, L<Lingua::String>
 

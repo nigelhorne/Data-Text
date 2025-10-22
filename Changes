@@ -5,6 +5,7 @@ Revision history for Data::Text
 	Use Object::Configure
 	Added fuzz testing
 	Added test dashboard
+	Remove unreachable code
 		
 0.18	Mon Aug 11 11:24:22 EDT 2025
 	Bump the version of Params::Get
