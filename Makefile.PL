@@ -26,6 +26,9 @@ WriteMakefile(
 	PL_FILES	=> {},
 	TEST_REQUIRES => {
 		'Data::Random' => 0,
+		'FindBin' => 0,
+		'IPC::Run3' => 0,
+		'IPC::System::Simple' => 0,
 		'Test::Carp' => 0,
 		'Test::Compile' => 0,
 		'Test::DescribeMe' => 0,

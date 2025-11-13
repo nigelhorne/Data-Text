@@ -14,7 +14,9 @@ t/40-more.t
 t/case.t
 t/clear.t
 t/comment-spelling.t
+t/conf/data_text_append.conf
 t/conf/data_text_append.yml
+t/conf/data_text_set.conf
 t/conf/data_text_set.yml
 t/conjunction.t
 t/coverage.t
