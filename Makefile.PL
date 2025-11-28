@@ -35,7 +35,8 @@ WriteMakefile(
 		'Test::Most' => 0,
 		'Test::NoWarnings' => 0,
 		'Test::Needs' => 0,
-		'Test::Returns' => 0
+		'Test::Returns' => 0,
+		'Test::Which' => 0,
 	}, PREREQ_PM => {
 		'IPC::System::Simple' => 0,
 		'Carp' => 0,
