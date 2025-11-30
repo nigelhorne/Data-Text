@@ -7,6 +7,8 @@ function: set
 config:
   test_undef: off
   test_empty: off
+  test_nuls: off
+  test_non_ascii: on
 
 new: ''
 
@@ -14,5 +16,14 @@ input:
   text:
     type: string
     min: 1
+
 output:
   type: object
+  can: as_string
+
+cases:
+  undef_dies:
+    input:
+      text:
+        undef
+    _STATUS: DIES
