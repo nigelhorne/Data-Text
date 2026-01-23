@@ -1,0 +1,602 @@
+{
+   "runs" : [
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174203.2666,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174203.26618,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174203.43578,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174203.43553,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174203.60367,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174203.60336,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174203.76847,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174203.76806,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174203.93933,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174203.93902,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174204.10753,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174204.10732,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174204.27583,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174204.27556,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174204.44181,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174204.44161,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174204.62113,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174204.61277,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174216.06821,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174204.8193,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174204.96451,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1769174204.9644,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174205.27809,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/00-load.t",
+         "start" : 1769174205.27693,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174205.79413,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/10-compile.t",
+         "start" : 1769174205.56842,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174206.15421,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/20-new.t",
+         "start" : 1769174206.11782,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174206.57517,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/30-basics.t",
+         "start" : 1769174206.54363,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174207.27363,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/40-more.t",
+         "start" : 1769174206.96049,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174207.72626,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/case.t",
+         "start" : 1769174207.69523,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174208.13717,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/clear.t",
+         "start" : 1769174208.11289,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174208.43509,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/comment-spelling.t",
+         "start" : 1769174208.43483,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174208.77817,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/conjunction.t",
+         "start" : 1769174208.74998,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174209.07716,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/coverage.t",
+         "start" : 1769174209.07683,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174209.3155,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/critic.t",
+         "start" : 1769174209.31525,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174209.70895,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/data.t",
+         "start" : 1769174209.62885,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174210.02549,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/dist.t",
+         "start" : 1769174210.02528,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174210.26196,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/eof.t",
+         "start" : 1769174210.26169,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174210.49953,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/eol.t",
+         "start" : 1769174210.49928,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174210.8368,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/equal.t",
+         "start" : 1769174210.80789,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174211.135,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/fixme.t",
+         "start" : 1769174211.13469,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174211.32092,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/fuzz.t",
+         "start" : 1769174211.32088,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174211.54131,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/kwalitee.t",
+         "start" : 1769174211.54103,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174211.77737,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/links.t",
+         "start" : 1769174211.77709,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174212.00973,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/manifest.t",
+         "start" : 1769174212.00954,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174212.24843,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/metrics.t",
+         "start" : 1769174212.24819,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174212.48117,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/modules-used.t",
+         "start" : 1769174212.48096,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174212.71445,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/no404s.t",
+         "start" : 1769174212.71418,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174212.9568,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/noopentickets.t",
+         "start" : 1769174212.95651,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174213.19666,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/noplan.t",
+         "start" : 1769174213.19638,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174213.43586,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/pod-cm.t",
+         "start" : 1769174213.43559,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174213.67403,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/pod-snippets.t",
+         "start" : 1769174213.67379,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174213.91527,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/pod-spelling.t",
+         "start" : 1769174213.91498,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174214.15032,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/pod-synopsis.t",
+         "start" : 1769174214.15005,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174214.38947,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/pod.t",
+         "start" : 1769174214.38918,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174214.65738,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/port.t",
+         "start" : 1769174214.65702,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174215.02052,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/replace.t",
+         "start" : 1769174214.99337,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174215.32138,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/strict.t",
+         "start" : 1769174215.32109,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174215.55666,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/unused.t",
+         "start" : 1769174215.55638,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174215.79668,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/vars.t",
+         "start" : 1769174215.79643,
+         "version" : "0.18"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1769174216.03016,
+         "name" : "Data-Text",
+         "perl" : "5.40.3",
+         "run" : "t/version.t",
+         "start" : 1769174216.02993,
+         "version" : "0.18"
+      }
+   ],
+   "summary" : {
+      "Total" : {
+         "branch" : {
+            "covered" : 37,
+            "error" : 1,
+            "percentage" : 97.3684210526316,
+            "total" : 38,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 10,
+            "error" : 1,
+            "percentage" : 90.9090909090909,
+            "total" : 11,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 137,
+            "error" : 2,
+            "percentage" : 98.5611510791367,
+            "total" : 139
+         },
+         "subroutine" : {
+            "covered" : 26,
+            "percentage" : 100,
+            "total" : 26
+         },
+         "total" : {
+            "covered" : 210,
+            "error" : 4,
+            "percentage" : 98.1308411214953,
+            "total" : 214,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Data/Text.pm" : {
+         "branch" : {
+            "covered" : 37,
+            "error" : 1,
+            "percentage" : 97.3684210526316,
+            "total" : 38,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 10,
+            "error" : 1,
+            "percentage" : 90.9090909090909,
+            "total" : 11,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 137,
+            "error" : 2,
+            "percentage" : 98.5611510791367,
+            "total" : 139
+         },
+         "subroutine" : {
+            "covered" : 26,
+            "percentage" : 100,
+            "total" : 26
+         },
+         "total" : {
+            "covered" : 210,
+            "error" : 4,
+            "percentage" : 98.1308411214953,
+            "total" : 214,
+            "uncoverable" : 0
+         }
+      }
+   }
+}
