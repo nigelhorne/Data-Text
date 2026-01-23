@@ -309,7 +309,7 @@ sub as_string {
 
 =head2	length
 
-Returns the length of the text.
+Returns the length of the text as an integer.
 
 This is actually the number of characters, not the number of bytes.
 

@@ -29,9 +29,10 @@ if((-d $dirname) && opendir(my $dh, $dirname)) {
 			ok($? == 0, 'Generated test script exits successfully');
 
 			if($? == 0) {
+				diag($stderr) if(length($stderr));
 				ok($stdout =~ /^Result: PASS/ms);
 				if($stdout =~ /Files=1, Tests=(\d+)/ms) {
-					diag("$1 tests run");
+					diag("$filepath: $1 tests run");
 				}
 			} else {
 				diag("$filepath: STDOUT:\n$stdout");
@@ -39,7 +40,6 @@ if((-d $dirname) && opendir(my $dh, $dirname)) {
 				diag("$filepath Failed");
 				last;
 			}
-			diag($stderr) if(length($stderr));
 		}
 	}
 	closedir($dh);
