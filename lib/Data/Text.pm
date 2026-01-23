@@ -132,6 +132,8 @@ sub set {
 				$self = $self->append($text);
 			}
 			return $self;
+		} elsif(ref($params->{text}) eq 'HASH') {
+			Carp::croak(__PACKAGE__, ': set(): text cannot be a hashref');
 		}
 		$self->{'text'} = $params->{'text'}->as_string();
 	} else {
@@ -259,7 +261,7 @@ sub clear {
 	return $self;
 }
 
-=head2	equal
+=head2	equal($self, $other)
 
 Are two texts the same?
 
@@ -276,7 +278,7 @@ sub equal {
 	return $self->as_string() eq $other->as_string();
 }
 
-=head2	not_equal
+=head2	not_equal($self, $other)
 
 Are two texts different?
 
@@ -355,7 +357,7 @@ sub rtrim {
 	return $self;
 }
 
-=head2 replace
+=head2 replace($self, $replacements)
 
 Replaces multiple words in the text.
 
@@ -414,7 +416,7 @@ There is limited Unicode or UTF-8 support.
 
 =over 4
 
-=item * Test coverage report: L<https://nigelhorne.github.io/Data-Text/coverage/>
+=item * <Test Coverage Report|https://nigelhorne.github.io/Data-Text/coverage/>
 
 =item * L<String::Util>, L<Lingua::String>
 
@@ -452,7 +454,7 @@ L<http://deps.cpantesters.org/?module=Data::Text>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2021-2025 Nigel Horne.
+Copyright 2021-2026 Nigel Horne.
 
 This program is released under the following licence: GPL2
 

@@ -20,6 +20,7 @@ input:
 output:
   type: object
   can: as_string
+  _returns_self: true
 
 cases:
   undef_dies:
