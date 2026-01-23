@@ -399,9 +399,7 @@ sub appendconjunction
 {
 	my $self = shift;
 
-	$self->append(Lingua::Conjunction::conjunction(@_));
-
-	return $self;
+	return $self->append(Lingua::Conjunction::conjunction(@_));
 }
 
 =head1 AUTHOR

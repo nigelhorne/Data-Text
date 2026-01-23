@@ -9,6 +9,7 @@ config:
   test_empty: off
   test_nuls: off
   test_non_ascii: on
+  dedup: on
 
 new: ''
 
@@ -19,7 +20,8 @@ input:
 
 output:
   type: object
-  can: as_string
+  isa: Data::Text
+  _returns_self: on
 
 cases:
   undef_dies:
