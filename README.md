@@ -4,7 +4,7 @@ Data::Text - Class to handle text in an OO way
 
 # VERSION
 
-Version 0.18
+Version 0.19
 
 # DESCRIPTION
 
@@ -94,7 +94,7 @@ Returns the text as a string.
 
 ## length
 
-Returns the length of the text.
+Returns the length of the text as an integer.
 
 This is actually the number of characters, not the number of bytes.
 
