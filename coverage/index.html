@@ -84,7 +84,7 @@
 
 <tbody>
 
-<tr class="high"><td><a href="blib-lib-Data-Text-pm.html" title="View coverage line by line" target="_blank">blib/lib/Data/Text.pm</a> <a href="https://github.com/nigelhorne/Data-Text/blob/5cb09fcf880eb77558929339913044bc67bf806e/blib/lib/Data/Text.pm" class="icon-link" title="View source on GitHub">&#128269;</a><canvas class="sparkline" width="80" height="20" data-points="98.1,98.1,98.1,98.1,98.1,97.2,97.2,97.2,98.1,97.2"></canvas></td><td>97.8</td><td>95.0</td><td>90.9</td><td>100.0</td><td><span class="coverage-badge badge-good" title="Excellent coverage">97.2%</span></td><td class="neutral" title="Previous: 97.2%">&#9679; 0.0%</td></tr>
+<tr class="high"><td><a href="blib-lib-Data-Text-pm.html" title="View coverage line by line" target="_blank">blib/lib/Data/Text.pm</a> <a href="https://github.com/nigelhorne/Data-Text/blob/874b09150cdcea8ee108de1bbefc7d4b54163a33/blib/lib/Data/Text.pm" class="icon-link" title="View source on GitHub">&#128269;</a><canvas class="sparkline" width="80" height="20" data-points="98.1,98.1,98.1,98.1,97.2,97.2,97.2,98.1,97.2,97.2"></canvas></td><td>97.8</td><td>95.0</td><td>90.9</td><td>100.0</td><td><span class="coverage-badge badge-good" title="Excellent coverage">97.2%</span></td><td class="neutral" title="Previous: 97.2%">&#9679; 0.0%</td></tr>
 
 <tr class="summary-row nosort"><td colspan="2"><strong>Summary</strong></td><td colspan="2">1 files</td><td colspan="3">Avg: 97%, Low: 0</td></tr>
 
@@ -133,8 +133,7 @@ function linearRegression(data) {
 	}));
 }
 
-const dataPoints = [ { x: "2025-10-22T13:29:02-04:00", y: 98.5981308411215, delta: 0, url: "https://github.com/nigelhorne/Data-Text/commit/f45c48e", label: "2025-10-22T13:29:02-04:00", pointBackgroundColor: "gray", comment: "Fix grammar mistakes" },
-{ x: "2025-11-13T16:01:28-05:00", y: 98.1308411214953, delta: -0.5, url: "https://github.com/nigelhorne/Data-Text/commit/a78fbdd", label: "2025-11-13T16:01:28-05:00", pointBackgroundColor: "red", comment: "Dynamically create fuzz" },
+const dataPoints = [ { x: "2025-11-13T16:01:28-05:00", y: 98.1308411214953, delta: 0, url: "https://github.com/nigelhorne/Data-Text/commit/a78fbdd", label: "2025-11-13T16:01:28-05:00", pointBackgroundColor: "gray", comment: "Dynamically create fuzz" },
 { x: "2025-11-13T16:14:28-05:00", y: 98.1308411214953, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/ebe401f", label: "2025-11-13T16:14:28-05:00", pointBackgroundColor: "gray", comment: "Try a different s390 workflow" },
 { x: "2025-11-14T19:25:52-05:00", y: 98.1308411214953, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/37c1fa7", label: "2025-11-14T19:25:52-05:00", pointBackgroundColor: "gray", comment: "Try ARM64" },
 { x: "2025-11-24T08:28:07-05:00", y: 98.1308411214953, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/0e09c7a", label: "2025-11-24T08:28:07-05:00", pointBackgroundColor: "gray", comment: "Don't do AUTHOR_TESTING on Appveyor" },
@@ -142,7 +141,8 @@ const dataPoints = [ { x: "2025-10-22T13:29:02-04:00", y: 98.5981308411215, delt
 { x: "2025-11-29T19:16:07-05:00", y: 98.1308411214953, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/545ea24", label: "2025-11-29T19:16:07-05:00", pointBackgroundColor: "gray", comment: "Merge pull request #11 from nigelhorne/dependabot/github_actions/actions/checkout-6" },
 { x: "2026-01-23T08:09:32-05:00", y: 98.1308411214953, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/fe3caa2", label: "2026-01-23T08:09:32-05:00", pointBackgroundColor: "gray", comment: "Latest fuzz.t" },
 { x: "2026-01-23T11:57:31-05:00", y: 97.2350230414746, delta: -0.9, url: "https://github.com/nigelhorne/Data-Text/commit/6a1fbeb", label: "2026-01-23T11:57:31-05:00", pointBackgroundColor: "red", comment: "Test returns_self" },
-{ x: "2026-01-23T20:53:13-05:00", y: 97.2222222222222, delta: -0.0, url: "https://github.com/nigelhorne/Data-Text/commit/93a6db4", label: "2026-01-23T20:53:13-05:00", pointBackgroundColor: "gray", comment: "Release 0.19" } ];
+{ x: "2026-01-23T20:53:13-05:00", y: 97.2222222222222, delta: -0.0, url: "https://github.com/nigelhorne/Data-Text/commit/93a6db4", label: "2026-01-23T20:53:13-05:00", pointBackgroundColor: "gray", comment: "Release 0.19" },
+{ x: "2026-01-24T20:26:15-05:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/5cb09fc", label: "2026-01-24T20:26:15-05:00", pointBackgroundColor: "gray", comment: "Potential fix for code scanning alert no. 13: Workflow does not contain permissions" } ];
 
 const regressionPoints = linearRegression(dataPoints);
 // Try to register the zoom plugin (handles different UMD builds)
@@ -403,7 +403,7 @@ function refresh(){
 <footer>
 	<p><span style="margin-left:8px;color:#666;font-size:0.9em;">Use mouse wheel or pinch to zoom; drag to pan</span></p>
 	<p>Project: <a href="https://github.com/nigelhorne/Data-Text">Data-Text</a></p>
-	<p><em>Last updated: 2026-01-25 01:49:16 - <a href="https://github.com/nigelhorne/Data-Text/commit/5cb09fcf880eb77558929339913044bc67bf806e">commit <code>5cb09fc</code></a></em></p>
+	<p><em>Last updated: 2026-01-25 02:12:33 - <a href="https://github.com/nigelhorne/Data-Text/commit/874b09150cdcea8ee108de1bbefc7d4b54163a33">commit <code>874b091</code></a></em></p>
 </footer>
 </body>
 </html>
