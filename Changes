@@ -1,5 +1,8 @@
 Revision history for Data::Text
 
+0.20
+	Updated the CI scripts
+
 0.19	Fri Jan 23 20:52:56 EST 2026
 	Try harder to handle non-English LANGUAGE setting (RT#168965)
 	Use Object::Configure

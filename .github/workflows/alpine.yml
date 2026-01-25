@@ -31,7 +31,7 @@ jobs:
           cd $RUNNER_WORKSPACE
           git clone --recurse-submodules $GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git
           cd $GITHUB_WORKSPACE
-          cpanm -iqn File::Spec ExtUtils::MakeMaker Object::Configure
+          cpanm -iqn File::Spec ExtUtils::MakeMaker Object::Configure Lingua::Conjunction
           cpanm -iqn --installdeps .
       - name: Make module
         run: |
