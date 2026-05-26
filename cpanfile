@@ -1,4 +1,4 @@
-# Generated from Makefile.PL
+# Generated from Makefile.PL using makefilepl2cpanfile
 
 requires 'perl', '5.008';
 
@@ -11,6 +11,10 @@ requires 'Params::Get', '0.13';
 requires 'Scalar::Util';
 requires 'String::Util';
 requires 'overload';
+
+on 'configure' => sub {
+	requires 'ExtUtils::MakeMaker', '6.64';
+};
 
 on 'test' => sub {
 	requires 'Data::Random';
@@ -26,6 +30,7 @@ on 'test' => sub {
 	requires 'Test::Returns';
 	requires 'Test::Which';
 };
+
 on 'develop' => sub {
 	requires 'Devel::Cover';
 	requires 'Perl::Critic';
