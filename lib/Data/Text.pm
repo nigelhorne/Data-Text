@@ -83,9 +83,8 @@ sub new {
 	} else {
 		# Create a new object
 		$self = bless { }, $class;
+		$params = Object::Configure::configure($class, $params);
 	}
-
-	$params = Object::Configure::configure($class, $params);
 
 	# Set additional attributes if arguments are provided
 	$self->set($params) if($params->{'text'});
