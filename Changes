@@ -13,7 +13,7 @@ Revision history for Data::Text
 	  calls that Params::Get 0.15 now handles with Carp::confess
 
 	[ Testing ]
-	Updated the CI scripts
+	- Updated the CI scripts
 
 0.19	Fri Jan 23 20:52:56 EST 2026
 	Try harder to handle non-English LANGUAGE setting (RT#168965)

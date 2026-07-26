@@ -8,8 +8,8 @@ use utf8;
 use Carp ();
 use Encode ();
 use Lingua::Conjunction ();
-use Object::Configure 0.16 ();
-use Params::Get 0.13 ();
+use Object::Configure 0.23;
+use Params::Get 0.15;
 use Scalar::Util qw(blessed);
 use String::Util ();
 

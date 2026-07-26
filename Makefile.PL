@@ -44,9 +44,9 @@ WriteMakefile(
 		'Carp' => 0,
 		'Encode' => 0,
 		'Lingua::Conjunction' => 0,
-		'Object::Configure' => 0.16,
+		'Object::Configure' => 0.23,
 		'overload' => 0,
-		'Params::Get' => 0.13,
+		'Params::Get' => 0.15,
 		'Scalar::Util' => 0,
 		'String::Util' => 0
 	}, dist => $dist,
