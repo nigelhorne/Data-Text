@@ -13,7 +13,7 @@ requires 'String::Util';
 requires 'overload';
 
 on 'configure' => sub {
-	requires 'ExtUtils::MakeMaker', '6.64';
+	requires 'ExtUtils::MakeMaker', '6.64';   # Minimum version for TEST_REQUIRES
 };
 
 on 'test' => sub {
