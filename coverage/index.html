@@ -58,6 +58,75 @@
 			display: inline-block;
 			vertical-align: middle;
 		}
+		tr.cpan-fail td {
+			background-color: #fdd;
+		}
+		tr.cpan-unknown td {
+			background-color: #eee;
+			color: #666;
+		}
+		tr.cpan-na td {
+			background-color: #ffffde;
+			color: #666;
+		}
+		.new-failure {
+			background: #c00;
+			color: #fff;
+			font-weight: bold;
+			padding: 2px 6px;
+			border-radius: 4px;
+			font-size: 0.85em;
+		}
+		.notice {
+			padding: 8px 12px;
+			margin: 10px 0;
+			border-radius: 4px;
+			font-size: 0.95em;
+		}
+		.notice strong {
+			font-weight: bold;
+		}
+		.notice.perl-version-cliff {
+			background-color: #fff3cd; /* soft amber */
+			border: 1px solid #ffeeba;
+			color: #856404;
+		}
+		.notice.perl-version-cliff a {
+			color: #533f03;
+			text-decoration: underline;
+		}
+		.notice.perl-version-cliff a:hover {
+			text-decoration: none;
+		}
+		.notice.locale-cliff {
+			border-left: 4px solid #d97706;
+			background: #fffbeb;
+			padding: 0.5em 1em;
+		}
+		.notice.rt-issues {
+			background: #fff6e5;
+			border-left: 4px solid #d9822b;
+		}
+		table.root-causes {
+			border-collapse: collapse;
+			width: 100%;
+			margin-bottom: 1.5em;
+		}
+		table.root-causes th,
+		table.root-causes td {
+			border: 1px solid #ccc;
+			padding: 8px;
+			vertical-align: top;
+		}
+		table.root-causes tr.high {
+			background-color: #dfd;
+		}
+		table.root-causes tr.med {
+			background-color: #ffd;
+		}
+		table.root-causes tr.low {
+			background-color: #fdd;
+		}
 	</style>
 </head>
 <body>
@@ -65,31 +134,28 @@
 	<a href="https://github.com/nigelhorne/Data-Text">
 		<img src="https://img.shields.io/github/stars/nigelhorne/Data-Text?style=social" alt="GitHub stars">
 	</a>
-	<img src="https://img.shields.io/badge/coverage-97%25-brightgreen" alt="Coverage badge">
+	<img src="https://img.shields.io/badge/coverage-98%25-brightgreen" alt="Coverage badge">
 </div>
 <h1>Data::Text</h1><h2>Coverage Report</h2>
 <table data-sort-col="0" data-sort-order="asc">
 <!-- Make the column headers clickable -->
 <thead>
 <tr>
-	<th class="sortable" onclick="sortTable(0)"><span class="label">File</span> <span class="arrow active">&#x25B2;</span></th>
-	<th class="sortable" onclick="sortTable(1)"><span class="label">Stmt</span> <span class="arrow">&#x25B2;</span></th>
-	<th class="sortable" onclick="sortTable(2)"><span class="label">Branch</span> <span class="arrow">&#x25B2;</span></th>
-	<th class="sortable" onclick="sortTable(3)"><span class="label">Cond</span> <span class="arrow">&#x25B2;</span></th>
-	<th class="sortable" onclick="sortTable(4)"><span class="label">Sub</span> <span class="arrow">&#x25B2;</span></th>
-	<th class="sortable" onclick="sortTable(5)"><span class="label">Total</span> <span class="arrow">&#x25B2;</span></th>
-	<th class="sortable" onclick="sortTable(6)"><span class="label">&Delta;</span> <span class="arrow">&#x25B2;</span></th>
+	<th class="sortable" onclick="sortTable(this, 0)"><span class="label">File</span> <span class="arrow active">&#x25B2;</span></th>
+	<th class="sortable" onclick="sortTable(this, 1)"><span class="label">Stmt</span> <span class="arrow">&#x25B2;</span></th>
+	<th class="sortable" onclick="sortTable(this, 2)"><span class="label">Branch</span> <span class="arrow">&#x25B2;</span></th>
+	<th class="sortable" onclick="sortTable(this, 3)"><span class="label">Cond</span> <span class="arrow">&#x25B2;</span></th>
+	<th class="sortable" onclick="sortTable(this, 4)"><span class="label">Sub</span> <span class="arrow">&#x25B2;</span></th>
+	<th class="sortable" onclick="sortTable(this, 5)"><span class="label">Total</span> <span class="arrow">&#x25B2;</span></th>
+	<th class="sortable" onclick="sortTable(this, 6)"><span class="label">&Delta;</span> <span class="arrow">&#x25B2;</span></th>
 </tr>
 </thead>
 
 <tbody>
 
-<tr class="high"><td><a href="blib-lib-Data-Text-pm.html" title="View coverage line by line" target="_blank">blib/lib/Data/Text.pm</a> <a href="https://github.com/nigelhorne/Data-Text/blob/ca474a6dfb168f4293f5caf17577fa9f5c217a79/blib/lib/Data/Text.pm" class="icon-link" title="View source on GitHub">&#128269;</a><canvas class="sparkline" width="80" height="20" data-points="97.2,98.1,97.2,97.2,97.2,97.2,97.2,97.2,97.2,97.2"></canvas></td><td>97.8</td><td>95.0</td><td>90.9</td><td>100.0</td><td><span class="coverage-badge badge-good" title="Excellent coverage">97.2%</span></td><td class="neutral" title="Previous: 97.2%">&#9679; 0.0%</td></tr>
-
-<tr class="summary-row nosort"><td colspan="2"><strong>Summary</strong></td><td colspan="2">1 files</td><td colspan="3">Avg: 97%, Low: 0</td></tr>
-
-<tr class="high nosort"><td><strong>Total</strong></td><td>97.8</td><td>95.0</td><td>90.9</td><td>100.0</td><td colspan="2"><strong>97.2</strong></td></tr>
-
+<tr class="high"><td><a href="blib-lib-Data-Text-pm.html" title="View coverage line by line" target="_blank">lib/Data/Text.pm</a> <a href="https://github.com/nigelhorne/Data-Text/blob/fa89fb95d5fd643cd6d16393f435ed1363a21443/lib/Data/Text.pm" class="icon-link" title="View source on GitHub">&#128269;</a><canvas class="sparkline" width="80" height="20" data-points="98.1,97.2,97.2,97.2,97.2,97.2,97.2,97.2,97.2,97.2"></canvas></td><td>98.6</td><td>97.5</td><td>90.9</td><td>100.0</td><td><span class="coverage-badge badge-good" title="Excellent coverage">98.2%</span></td><td class="neutral" title="Previous (sparkline): 97.2%">&#9679; 0.0%</td></tr>
+<tr class="summary-row nosort"><td colspan="2"><strong>Summary</strong></td><td colspan="2">1 files</td><td colspan="3">Avg: 98%, Low: 0</td></tr>
+<tr class="high nosort"><td><strong>Total</strong></td><td>98.6</td><td>97.5</td><td>90.9</td><td>100.0</td><td colspan="2"><strong>98.2</strong></td></tr>
 </tbody></table>
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
 	<div>
@@ -106,12 +172,11 @@
 		<button id="resetZoomBtn" type="button">Reset Zoom</button>
 	</div>
 </div>
-
 <canvas id="coverageTrend" width="600" height="300"></canvas>
 <!-- Zoom controls for the trend chart -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- Add chartjs-plugin-zoom (required for wheel/pinch/drag zoom & pan) -->
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.1.1/dist/chartjs-plugin-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom\@2.1.1/dist/chartjs-plugin-zoom.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 <script>
 function linearRegression(data) {
@@ -124,6 +189,9 @@ function linearRegression(data) {
 	const sumXY = xs.reduce((acc, val, i) => acc + val * ys[i], 0);
 	const sumX2 = xs.reduce((acc, val) => acc + val * val, 0);
 
+	if(n < 2 || (n * sumX2 - sumX * sumX) === 0) {
+		return [];
+	}
 	const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
 	const intercept = (sumY - slope * sumX) / n;
 
@@ -133,24 +201,24 @@ function linearRegression(data) {
 	}));
 }
 
-const dataPoints = [ { x: "2026-01-23T08:09:32-05:00", y: 98.1308411214953, delta: 0, url: "https://github.com/nigelhorne/Data-Text/commit/fe3caa2", label: "2026-01-23T08:09:32-05:00", pointBackgroundColor: "gray", comment: "Latest fuzz.t" },
-{ x: "2026-01-23T11:57:31-05:00", y: 97.2350230414746, delta: -0.9, url: "https://github.com/nigelhorne/Data-Text/commit/6a1fbeb", label: "2026-01-23T11:57:31-05:00", pointBackgroundColor: "red", comment: "Test returns_self" },
-{ x: "2026-01-23T20:53:13-05:00", y: 97.2222222222222, delta: -0.0, url: "https://github.com/nigelhorne/Data-Text/commit/93a6db4", label: "2026-01-23T20:53:13-05:00", pointBackgroundColor: "gray", comment: "Release 0.19" },
-{ x: "2026-01-24T20:26:15-05:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/5cb09fc", label: "2026-01-24T20:26:15-05:00", pointBackgroundColor: "gray", comment: "Potential fix for code scanning alert no. 13: Workflow does not contain permissions" },
-{ x: "2026-01-24T21:09:16-05:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/874b091", label: "2026-01-24T21:09:16-05:00", pointBackgroundColor: "gray", comment: "Updated the GitHub Actions scripts" },
-{ x: "2026-01-24T21:14:53-05:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/9ec604d", label: "2026-01-24T21:14:53-05:00", pointBackgroundColor: "gray", comment: "Fix Alpine Linux Github Action" },
-{ x: "2026-03-09T07:58:26-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/271c655", label: "2026-03-09T07:58:26-04:00", pointBackgroundColor: "gray", comment: "Merge pull request #12 from nigelhorne/dependabot/github_actions/docker/setup-qemu-action-4" },
-{ x: "2026-03-30T14:20:10-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/b8e8842", label: "2026-03-30T14:20:10-04:00", pointBackgroundColor: "gray", comment: "Merge pull request #13 from nigelhorne/dependabot/github_actions/codecov/codecov-action-6" },
-{ x: "2026-06-28T21:41:10-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/77c6e7c", label: "2026-06-28T21:41:10-04:00", pointBackgroundColor: "gray", comment: "Only call Object::Configure when sensible" },
-{ x: "2026-06-29T08:24:00-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/b684417", label: "2026-06-29T08:24:00-04:00", pointBackgroundColor: "gray", comment: "Merge pull request #16 from nigelhorne/dependabot/github_actions/actions/cache-6" } ];
 
+const dataPoints = [ { x: "2026-01-23T08:09:32-05:00", y: 98.1308411214953, delta: 0, url: "https://github.com/nigelhorne/Data-Text/commit/fe3caa2c8b232d1a724cea563551842dd5c72b40", label: "2026-01-23T08:09:32-05:00", pointBackgroundColor: "gray", comment: "Latest fuzz.t" },
+{ x: "2026-01-23T20:53:13-05:00", y: 97.2222222222222, delta: -0.9, url: "https://github.com/nigelhorne/Data-Text/commit/93a6db4db8f7725f1becc3091c0d46ad434c85cc", label: "2026-01-23T20:53:13-05:00", pointBackgroundColor: "red", comment: "Release 0.19" },
+{ x: "2026-01-24T20:26:15-05:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/5cb09fcf880eb77558929339913044bc67bf806e", label: "2026-01-24T20:26:15-05:00", pointBackgroundColor: "gray", comment: "Potential fix for code scanning alert no. 13: Workflow does not contain permissions" },
+{ x: "2026-01-24T21:09:16-05:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/874b09150cdcea8ee108de1bbefc7d4b54163a33", label: "2026-01-24T21:09:16-05:00", pointBackgroundColor: "gray", comment: "Updated the GitHub Actions scripts" },
+{ x: "2026-01-24T21:14:53-05:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/9ec604d738a2f9d7a45576ec527089b9176f9209", label: "2026-01-24T21:14:53-05:00", pointBackgroundColor: "gray", comment: "Fix Alpine Linux Github Action" },
+{ x: "2026-03-09T07:58:26-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/271c6555928fc5aeb8be54fc2d1e04aa0a0c24c7", label: "2026-03-09T07:58:26-04:00", pointBackgroundColor: "gray", comment: "Merge pull request #12 from nigelhorne/dependabot/github_actions/docker/setup-qemu-action-4" },
+{ x: "2026-03-30T14:20:10-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/b8e8842a773ec6eab7a2d889a5dc94c12f49098b", label: "2026-03-30T14:20:10-04:00", pointBackgroundColor: "gray", comment: "Merge pull request #13 from nigelhorne/dependabot/github_actions/codecov/codecov-action-6" },
+{ x: "2026-06-28T21:41:10-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/77c6e7c907e1f311c1874260961657f720b8bdef", label: "2026-06-28T21:41:10-04:00", pointBackgroundColor: "gray", comment: "Only call Object::Configure when sensible" },
+{ x: "2026-06-29T08:24:00-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/b6844176618c5183201458123e286757034d39dc", label: "2026-06-29T08:24:00-04:00", pointBackgroundColor: "gray", comment: "Merge pull request #16 from nigelhorne/dependabot/github_actions/actions/cache-6" },
+{ x: "2026-07-25T20:37:07-04:00", y: 97.2222222222222, delta: 0.0, url: "https://github.com/nigelhorne/Data-Text/commit/ca474a6dfb168f4293f5caf17577fa9f5c217a79", label: "2026-07-25T20:37:07-04:00", pointBackgroundColor: "gray", comment: "Updated MANIFEST.SKIP" } ];
 const regressionPoints = linearRegression(dataPoints);
 // Try to register the zoom plugin (handles different UMD builds)
 (function registerZoomPlugin(){
 	try {
 		const candidates = ['chartjsPluginZoom','ChartZoom','zoomPlugin','chartjs_plugin_zoom','ChartjsPluginZoom','chartjsPluginZoom'];
-		for (const name of candidates) {
-			if (window[name]) {
+		for(const name of candidates) {
+			if(window[name]) {
 				try { Chart.register(window[name]); console.log('Registered zoom plugin:', name); return; } catch(e) { console.warn('zoom register failed for', name, e); }
 			}
 		}
@@ -235,7 +303,7 @@ const chart = new Chart(ctx, {
 			}
 		}, onClick: (e) => {
 			const points = chart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, true);
-			if (points.length) {
+			if(points.length) {
 				const url = chart.data.datasets[0].data[points[0].index].url;
 				window.open(url, '_blank');
 			}
@@ -252,10 +320,10 @@ document.getElementById('toggleTrend').addEventListener('change', function(e) {
 
 // Reset Zoom button handler (calls plugin API if available)
 const resetBtn = document.getElementById('resetZoomBtn');
-if (resetBtn) {
+if(resetBtn) {
 	resetBtn.addEventListener('click', function() {
 		try {
-			if (chart && typeof chart.resetZoom === 'function') {
+			if(chart && typeof chart.resetZoom === 'function') {
 				chart.resetZoom();
 			} else {
 				console.warn('resetZoom not available; zoom plugin may not be registered.');
@@ -266,81 +334,74 @@ if (resetBtn) {
 	});
 }
 
-function sortTable(n) {
-	const table = document.querySelector("table");
-	if (!table || !table.tBodies || !table.tBodies[0]) return;
+function sortTable(th, colIndex) {
+	const table = th.closest("table");
+	if(!table || !table.tBodies.length) return;
 
-	// All rows in tbody
-	const allBodyRows = Array.from(table.tBodies[0].rows);
+	const tbody = table.tBodies[0];
+	const rows = Array.from(tbody.rows);
 
-	// Separate normal (sortable) rows and fixed (nosort) rows.
-	const normalRows = allBodyRows.filter(r => !r.classList.contains("nosort"));
-	const fixedRows = allBodyRows.filter(r => r.classList.contains("nosort"));
-
-	// Decide numeric vs text column (column 0 = File => text)
-	const isNumeric = n > 0;
-
-	// Determine ascending/descending toggle logic
 	const prevCol = table.getAttribute("data-sort-col");
 	const prevOrder = table.getAttribute("data-sort-order") || "desc";
-	const asc = (prevCol != n) ? true : (prevOrder === "desc");
+	const asc = (prevCol != colIndex) ? true : (prevOrder === "desc");
+
+	const isNumeric = colIndex === 0; // Date column
+
+	const normalRows = rows.filter(r => !r.classList.contains("nosort"));
+	const fixedRows = rows.filter(r => r.classList.contains("nosort"));
 
 	normalRows.sort((a, b) => {
-		let x = (a.cells[n] && a.cells[n].innerText) ? a.cells[n].innerText.trim() : "";
-		let y = (b.cells[n] && b.cells[n].innerText) ? b.cells[n].innerText.trim() : "";
+		let x = a.cells[colIndex]?.innerText.trim() || "";
+		let y = b.cells[colIndex]?.innerText.trim() || "";
 
-		if (isNumeric) {
-			// Remove non-number characters (arrows, percent signs, bullets, etc.)
-			x = parseFloat(x.replace(/[^0-9.\-+eE]/g, '')) || 0;
-			y = parseFloat(y.replace(/[^0-9.\-+eE]/g, '')) || 0;
+		if(isNumeric) {
+			x = Date.parse(x) || 0;
+			y = Date.parse(y) || 0;
 		} else {
-			// Text compare (case-insensitive)
 			x = x.toLowerCase();
 			y = y.toLowerCase();
 		}
 
-		if (x < y) return asc ? -1 : 1;
-		if (x > y) return asc ? 1 : -1;
+		if(x < y) return asc ? -1 : 1;
+		if(x > y) return asc ? 1 : -1;
 		return 0;
 	});
 
-	// Reattach rows: sorted normalRows first, then fixedRows (keeps summary/total last)
-	normalRows.forEach(r => table.tBodies[0].appendChild(r));
-	fixedRows.forEach(r => table.tBodies[0].appendChild(r));
+	normalRows.forEach(r => tbody.appendChild(r));
+	fixedRows.forEach(r => tbody.appendChild(r));
 
-	// Update header arrows
+	// Update arrows
 	const headers = table.tHead.rows[0].cells;
-	for (let i = 0; i < headers.length; i++) {
+	for(let i = 0; i < headers.length; i++) {
 		const arrow = headers[i].querySelector(".arrow");
-		if (!arrow) continue;
-		if (i === n) {
-			// active column: bold arrow, direction ▲ or ▼
+		if(!arrow) continue;
+
+		if(i === colIndex) {
 			arrow.textContent = asc ? "▲" : "▼";
 			arrow.classList.add("active");
 		} else {
-			// inactive column: always ▲, dimmed
 			arrow.textContent = "▲";
 			arrow.classList.remove("active");
 		}
 	}
 
-	// Remember state (so clicking same column toggles)
-	table.setAttribute("data-sort-col", n);
+	table.setAttribute("data-sort-col", colIndex);
 	table.setAttribute("data-sort-order", asc ? "asc" : "desc");
 }
+
 
 // Initial display.
 // The table has been set up sorted in ascending order on the filename; reflect that in the GUI
 document.addEventListener("DOMContentLoaded", () => {
 	const table = document.querySelector("table");
-	if (!table) return;
+	if(!table) return;
 
 	const headers = table.tHead.rows[0].cells;
-	for (let i = 0; i < headers.length; i++) {
+	for(let i = 0; i < headers.length; i++) {
 		const arrow = headers[i].querySelector(".arrow");
-		if (!arrow) continue;
+		if(!arrow) continue;
 
-		if (i === 0) {
+		if(i === 0) {
 			arrow.textContent = "▲";
 			arrow.classList.add("active");
 		} else {
@@ -353,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 	document.querySelectorAll("canvas.sparkline").forEach(canvas => {
 		const raw = canvas.getAttribute("data-points");
-		if (!raw) return;
+		if(!raw) return;
 		const points = raw.split(",").map(v => parseFloat(v));
 
 		new Chart(canvas.getContext("2d"), {
@@ -400,10 +461,218 @@ function refresh(){
 }
 </script>
 
+<p><center>Use mouse wheel or pinch to zoom; drag to pan</center></p>
+<p>No issues active on <a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Text">RT</a></p>
+<h2>CPAN Testers Failures for Data-Text 0.19</h2>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const toggleFail = document.getElementById('toggleFail');
+	const toggleUnknown = document.getElementById('toggleUnknown');
+	const toggleNA = document.getElementById('toggleNA');
+	const toggleNew = document.getElementById('toggleNew');
+
+	function update() {
+		document.querySelectorAll('tr').forEach(row => {
+			// Skip header rows
+			if(row.querySelector('th')) return;
+
+			// Determine row status
+			const isFail = row.classList.contains('cpan-fail');
+			const isUnknown = row.classList.contains('cpan-unknown');
+			const isNA = row.classList.contains('cpan-na');
+			const isNew = !!row.querySelector('.new-failure');
+
+			// Decide whether to show the row
+			let show = true;
+
+			if(toggleFail && !toggleFail.checked && isFail) show = false;
+			if(toggleUnknown && !toggleUnknown.checked && isUnknown) show = false;
+			if(toggleNA && !toggleNA.checked && isNA) show = false;
+			if(toggleNew && toggleNew.checked && !isNew) show = false;
+
+			row.style.display = show ? '' : 'none';
+		});
+	}
+
+	[toggleFail, toggleUnknown, toggleNA, toggleNew].forEach(cb => {
+		if(cb) cb.addEventListener('change', update);
+	});
+
+	update();
+});
+document.addEventListener("DOMContentLoaded", () => {
+	const th = document.querySelector("table.sortable-table th");
+	if(th) sortTable(th, 0);
+});
+</script>
+
+
+<p><em>Showing one failure per OS/Perl combination.</em></p>
+<div style="margin-bottom: 0.5em;">
+	<label>
+		<input type="checkbox" id="toggleFail" checked>
+		FAIL
+	</label>
+	<label style="margin-left: 1em;">
+		<input type="checkbox" id="toggleUnknown">
+		UNKNOWN
+	</label>
+	<label style="margin-left: 1em;">
+		<input type="checkbox" id="toggleNA">
+		NA
+	</label>
+	<label style="margin-left: 1em;">
+		<input type="checkbox" id="toggleNew">
+		NEW only
+	</label>
+</div>
+
+<table class="sortable-table" data-sort-col="0" data-sort-order="asc">
+<thead>
+<tr>
+	<th class="sortable" onclick="sortTable(this, 0)">
+		<span class="label">Date</span> <span class="arrow">&#x25B2;</span>
+	</th>
+	<th class="sortable" onclick="sortTable(this, 1)">
+		<span class="label">OS</span> <span class="arrow">&#x25B2;</span>
+	</th>
+	<th class="sortable" onclick="sortTable(this, 2)">
+		<span class="label">Perl</span> <span class="arrow">&#x25B2;</span>
+	</th>
+	<th class="sortable" onclick="sortTable(this, 3)">
+		<span class="label">Reporter</span> <span class="arrow">&#x25B2;</span>
+	</th>
+	<th class="sortable" onclick="sortTable(this, 4)" title="Marks failures that did not occur in the previous release. The same OS, Perl version, architecture, and platform were passing before.">
+		<span class="label">New</span> <span class="arrow">&#x25B2;</span>
+	</th>
+	<th>Report</th>
+	<th>Repro</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="cpan-fail"><td>2026-05-21T13:40:00Z</td><td>freebsd</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/9f2a5736-551a-11f1-9ed5-e8cbaf804742" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:16:00Z</td><td>freebsd</td><td>5.43.11</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/373dd3ae-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:19:00Z</td><td>linux</td><td>5.36.3</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/a22818dc-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:02:00Z</td><td>midnightbsd</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/7de2be5e-5571-11f1-a7b2-8a1e1c3c8980" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-08T14:58:00Z</td><td>solaris</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/7c1a13ba-634a-11f1-a77e-f0c97ccf4b1b" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-02T04:31:00Z</td><td>linux</td><td>5.42.1</td><td>Andreas J. K&ouml;nig (ANDK)</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/f1872b42-75ce-11f1-9ce9-baf069e33e5f" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-01T19:26:00Z</td><td>freebsd</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/d36f73ea-5def-11f1-be8f-d9d028371c5b" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:17:00Z</td><td>linux</td><td>5.40.0</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/48fca250-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:19:00Z</td><td>linux</td><td>5.40.3</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/99d4a3b2-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:18:00Z</td><td>linux</td><td>5.42.0</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/7c700fdc-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-30T21:12:00Z</td><td>netbsd</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/4959ab64-5c6c-11f1-8232-87f2c1fbc78a" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-23T02:02:00Z</td><td>netbsd</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/92fe85c6-6ea7-11f1-8dab-b5a924d8e02f" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:15:00Z</td><td>freebsd</td><td>5.30.3</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/024193f2-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-07T21:09:00Z</td><td>linux</td><td>5.44.0 RC1</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/1dff821e-7a48-11f1-98d0-59fe6d8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:11:00Z</td><td>linux</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/c843bfb0-5572-11f1-9407-9951621a1c43" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:16:00Z</td><td>freebsd</td><td>5.40.4</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/2add22b8-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-15T03:43:00Z</td><td>linux</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/634a0bca-686c-11f1-a472-996492e7a370" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:56:00Z</td><td>openbsd</td><td>5.43.10</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/0a3c340a-5579-11f1-a586-c5768c397d37" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:17:00Z</td><td>linux</td><td>5.38.2</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/40b63a84-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-15T04:42:00Z</td><td>dragonfly</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/a4d8c222-6874-11f1-841b-f5e0fd5653c2" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:16:00Z</td><td>freebsd</td><td>5.38.5</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/1d0d7c8c-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-02T13:56:00Z</td><td>freebsd</td><td>5.44.0 RC1</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/c4eb93bc-761d-11f1-b3ba-b919c506c135" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-11T01:37:00Z</td><td>freebsd</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/24b38726-6536-11f1-a588-8d0c4f188f7c" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:13:00Z</td><td>linux</td><td>5.40.0</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/c58ca050-7a8b-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:19:00Z</td><td>linux</td><td>5.38.5</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/90075f32-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-29T05:34:00Z</td><td>linux</td><td>5.44.0 RC1</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/2c766c2c-737c-11f1-8bc2-872aba600931" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:37:00Z</td><td>midnightbsd</td><td>5.43.10</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/681bb968-5576-11f1-8272-c8ead722e6cd" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-27T12:43:00Z</td><td>linux</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/a22216b4-59c9-11f1-a707-e615ea9a53bc" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:12:00Z</td><td>linux</td><td>5.38.2</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/ab1351c4-7a8b-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:46:00Z</td><td>netbsd</td><td>5.43.10</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/b94ed184-5577-11f1-a106-ff8bcf941562" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:18:00Z</td><td>linux</td><td>5.32.1</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/711264d2-7a8c-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:47:00Z</td><td>linux</td><td>5.43.10</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/d75fc9d0-5577-11f1-bddc-a1ad0741f07b" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:06:00Z</td><td>dragonfly</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/1d0f3ab6-5572-11f1-8892-be65de45fd99" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-08T00:54:00Z</td><td>linux</td><td>5.43.11</td><td>Andreas J. K&ouml;nig (ANDK)</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/9182dbfe-62d4-11f1-baa8-c2438a4f4c04" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-08T05:14:00Z</td><td>linux</td><td>5.36.3</td><td>Slaven Rezi&#x107;</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/e931e2c2-7a8b-11f1-9e34-933b6e8775ea" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-02T04:36:00Z</td><td>linux</td><td>5.42.0</td><td>Andreas J. K&ouml;nig (ANDK)</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/a288ed22-75cf-11f1-baab-9a7adef41992" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-05T17:13:00Z</td><td>linux</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/dbdea892-6101-11f1-974a-a039ba8045f2" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-07-02T04:21:00Z</td><td>linux</td><td>5.42.0</td><td>Andreas J. K&ouml;nig (ANDK)</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/7b3c185e-75cd-11f1-89bd-e5d9e3bf3c77" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:09:00Z</td><td>openbsd</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/7e94145a-5572-11f1-a836-a81d166a50ce" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-23T22:03:00Z</td><td>openbsd</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/5a239db0-6f4f-11f1-94eb-d9783e4f0234" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-06-19T01:11:00Z</td><td>midnightbsd</td><td>5.43.12</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/dcb04346-6b7b-11f1-b450-a23c074a6c09" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:42:00Z</td><td>dragonfly</td><td>5.43.10</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/2c2e0202-5577-11f1-b10e-89e945cfb19c" target="_blank">View</a></td><td></td></tr>
+<tr class="cpan-fail"><td>2026-05-22T00:08:00Z</td><td>netbsd</td><td>5.43.11</td><td>Carlos Guevara</td><td></td>
+				<td><a href="https://www.cpantesters.org/cpan/report/587a5ff4-5572-11f1-b782-9ef8b9cd0f93" target="_blank">View</a></td><td></td></tr>
+</tbody></table>
+<h2>Mutation Report</h2>
+<h3>Mutation Summary</h3>
+<ul>
+<li><b>Score</b>: 89.09%</li>
+<li><b>Total</b>: 55</li>
+<li><b>Killed</b>: 
+49
+</li>
+<li><b>Survived</b>: 
+6
+</li>
+</ul>
+<h3>Mutation Files</h3>
+
+<table border='1' cellpadding='5'>
+
+<tr><th>File</th><th>Total</th><th>Killed</th><th>Survivors</th><th>Skipped</th><th>Score%</th><th>Complexity</th><th title="TER1=Statement, TER2=Branch, TER3=LCSAJ Path">TER1 / TER2 / TER3</th></tr>
+
+<tr class="med"><td><a href="mutation_html/lib/Data/Text.pm.html" title="View mutation line by line" target="_blank">lib/Data/Text.pm</a> <a href="https://github.com/nigelhorne/Data-Text/blob/fa89fb95d5fd643cd6d16393f435ed1363a21443/lib/Data/Text.pm" class="icon-link" title="View source on GitHub">&#128269;</a></td><td>55</td><td>49</td><td>6</td><td>0</td><td><span class="coverage-badge badge-warn" title="Moderate">89.1%</span></td><td><span class="coverage-badge badge-good" title="Good">27</span></td><td><span class="coverage-badge badge-good" title="Excellent">98.6%</span> / <span class="coverage-badge badge-good" title="Excellent">97.5%</span> / <span class="coverage-badge badge-good" title="Excellent">100.0%</span></td></tr>
+</table>
+
+<h2>Structural Coverage (Approximate)</h2>
+<div class='summary'>
+Statement Coverage: 98.57% (138 / 140)<br>
+Branch Coverage: 97.50% (39 / 40)<br>
+<em>Approximate LCSAJ derived from branch and statement coverage.</em>
+</div>
+<h2>Executive Summary</h2>
+<div class='summary'>
+Tests execute 98.57% of the code but detect only 89.09% of injected faults.
+</div>
 <footer>
-	<p><span style="margin-left:8px;color:#666;font-size:0.9em;">Use mouse wheel or pinch to zoom; drag to pan</span></p>
 	<p>Project: <a href="https://github.com/nigelhorne/Data-Text">Data-Text</a></p>
-	<p><em>Last updated: 2026-07-26 00:42:29 - <a href="https://github.com/nigelhorne/Data-Text/commit/ca474a6dfb168f4293f5caf17577fa9f5c217a79">commit <code>ca474a6</code></a></em></p>
+	<p><em>Last updated: 2026-07-26 02:25:39 - <a href="https://github.com/nigelhorne/Data-Text/commit/fa89fb95d5fd643cd6d16393f435ed1363a21443">commit <code>fa89fb9</code></a></em></p>
+	<p style="float: right; font-size: 0.85em; color: #999;">Powered by <a href="https://metacpan.org/dist/App-Test-Generator">App::Test::Generator 0.44</a></p>
 </footer>
 </body>
 </html>
