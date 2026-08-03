@@ -19,11 +19,11 @@ Data::Text - Class to handle text in an OO way
 
 =head1 VERSION
 
-Version 0.19
+Version 0.20
 
 =cut
 
-our $VERSION = '0.19';
+our $VERSION = '0.20';
 
 use overload (
 	'==' => \&equal,
@@ -433,7 +433,9 @@ L<http://deps.cpantesters.org/?module=Data::Text>
 
 Copyright 2021-2026 Nigel Horne.
 
-This program is released under the following licence: GPL2
+Usage is subject to the GPL2 licence terms.
+If you use it,
+please let me know.
 
 =cut
 
