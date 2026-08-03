@@ -311,11 +311,11 @@ Approximate LCSAJ segments: 41<br>
 </span><span class="">   19: 
 </span><span class="">   20: =head1 VERSION
 </span><span class="">   21: 
-</span><span class="">   22: Version 0.19
+</span><span class="">   22: Version 0.20
 </span><span class="">   23: 
 </span><span class="">   24: =cut
 </span><span class="">   25: 
-</span><span class="">   26: our $VERSION = &#39;0.19&#39;;
+</span><span class="">   26: our $VERSION = &#39;0.20&#39;;
 </span><span class="">   27: 
 </span><span class="">   28: use overload (
 </span><span class="">   29: 	&#39;==&#39; =&gt; \&amp;equal,
@@ -406,7 +406,7 @@ Approximate LCSAJ segments: 41<br>
 </span><p> <b> Mutants (Total: 1, Killed: 1, Survived: 0)</b><p><span class="killed tooltip" data-tooltip="Mutations here were killed. Tests are effectively covering this logic.">  114: 		if(ref($params-&gt;{&#39;text&#39;}) eq &#39;ARRAY&#39;) {
 </span><p> <b> Mutants (Total: 1, Killed: 1, Survived: 0)</b><p><span class="killed tooltip" data-tooltip="Mutations here were killed. Tests are effectively covering this logic.">  115: 			if(scalar(@{$params-&gt;{&#39;text&#39;}}) == 0) {
 </span><p> <b> Mutants (Total: 2, Killed: 2, Survived: 0)</b><p><span class="">  116: 				Carp::carp(__PACKAGE__, &#39;: no text given&#39;);
-</span><span class="survived-2 tooltip" data-tooltip="Return value mutation survived. Add tests asserting exact return values. Boolean logic mutation survived. Add tests covering both true and false paths.">  117: 				return $self;
+</span><span class="survived-2 tooltip" data-tooltip="Boolean logic mutation survived. Add tests covering both true and false paths. Return value mutation survived. Add tests asserting exact return values.">  117: 				return $self;
 </span>
 					<details class="mutant-details">
 					<summary>Mutants (Total: 2, Killed: 0, Survived: 2)</summary>
@@ -788,11 +788,13 @@ is( func(INPUT), EXPECTED, &#39;Verify correct return value&#39; );
 </span><span class="">  433: 
 </span><span class="">  434: Copyright 2021-2026 Nigel Horne.
 </span><span class="">  435: 
-</span><span class="">  436: This program is released under the following licence: GPL2
-</span><span class="">  437: 
-</span><span class="">  438: =cut
+</span><span class="">  436: Usage is subject to the GPL2 licence terms.
+</span><span class="">  437: If you use it,
+</span><span class="">  438: please let me know.
 </span><span class="">  439: 
-</span><span class="">  440: 1;
+</span><span class="">  440: =cut
+</span><span class="">  441: 
+</span><span class="">  442: 1;
 </span></pre>
 
 <script>
