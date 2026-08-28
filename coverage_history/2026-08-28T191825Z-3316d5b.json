@@ -1,0 +1,769 @@
+{
+   "runs" : [
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944736.44103,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "-e",
+         "start" : 1787944710.11631,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944710.22963,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "-e",
+         "start" : 1787944710.22952,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944710.50341,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/00-load.t",
+         "start" : 1787944710.50224,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944710.93481,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/10-compile.t",
+         "start" : 1787944710.73101,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944711.23088,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/20-new.t",
+         "start" : 1787944711.2067,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944711.57974,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/30-basics.t",
+         "start" : 1787944711.55578,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944712.1676,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/40-more.t",
+         "start" : 1787944711.91059,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944712.56539,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/case.t",
+         "start" : 1787944712.53546,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944712.9239,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/clear.t",
+         "start" : 1787944712.90529,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944713.15396,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/comment-spelling.t",
+         "start" : 1787944713.15374,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944713.44544,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/conjunction.t",
+         "start" : 1787944713.42339,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944713.67739,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/coverage.t",
+         "start" : 1787944713.67717,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944713.85823,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/critic.t",
+         "start" : 1787944713.85797,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944714.18601,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/data.t",
+         "start" : 1787944714.12499,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944714.43074,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/dist.t",
+         "start" : 1787944714.43047,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944714.6137,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/eof.t",
+         "start" : 1787944714.61347,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944714.79407,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/eol.t",
+         "start" : 1787944714.79385,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944715.08474,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/equal.t",
+         "start" : 1787944715.0615,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944715.31836,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/fixme.t",
+         "start" : 1787944715.31813,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944732.60959,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/fuzz.t",
+         "start" : 1787944715.58959,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944727.55511,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/opt/hostedtoolcache/perl/5.40.5/x64/bin/fuzz-harness-generator",
+         "start" : 1787944715.80423,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944727.51424,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/opt/hostedtoolcache/perl/5.40.5/x64/bin/prove",
+         "start" : 1787944715.96427,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944727.05053,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/tmp/CtxWmgkg9H",
+         "start" : 1787944716.25464,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944728.82836,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/opt/hostedtoolcache/perl/5.40.5/x64/bin/fuzz-harness-generator",
+         "start" : 1787944727.85662,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944728.67622,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/opt/hostedtoolcache/perl/5.40.5/x64/bin/prove",
+         "start" : 1787944728.01716,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944728.32553,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/tmp/MoGDSBMuSE",
+         "start" : 1787944728.30454,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944732.53098,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/opt/hostedtoolcache/perl/5.40.5/x64/bin/fuzz-harness-generator",
+         "start" : 1787944729.1146,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944732.48898,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/opt/hostedtoolcache/perl/5.40.5/x64/bin/prove",
+         "start" : 1787944729.27479,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944732.09217,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "/tmp/7L1deA8v89",
+         "start" : 1787944729.5648,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944732.82653,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/kwalitee.t",
+         "start" : 1787944732.82628,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944733.02833,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/links.t",
+         "start" : 1787944733.0281,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944733.21367,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/manifest.t",
+         "start" : 1787944733.21343,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944733.41279,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/metrics.t",
+         "start" : 1787944733.41256,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944733.59599,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/modules-used.t",
+         "start" : 1787944733.59578,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944733.77951,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/no404s.t",
+         "start" : 1787944733.77928,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944733.96374,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/noopentickets.t",
+         "start" : 1787944733.96352,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944734.1487,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/noplan.t",
+         "start" : 1787944734.14846,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944734.33257,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/pod-cm.t",
+         "start" : 1787944734.33232,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944734.51935,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/pod-snippets.t",
+         "start" : 1787944734.51912,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944734.70418,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/pod-spelling.t",
+         "start" : 1787944734.70395,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944734.88776,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/pod-synopsis.t",
+         "start" : 1787944734.88753,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944735.0717,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/pod.t",
+         "start" : 1787944735.07147,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944735.27628,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/port.t",
+         "start" : 1787944735.27604,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944735.58173,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/replace.t",
+         "start" : 1787944735.56066,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944735.8262,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/strict.t",
+         "start" : 1787944735.82591,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944736.02009,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/unused.t",
+         "start" : 1787944736.0198,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944736.21257,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/vars.t",
+         "start" : 1787944736.2123,
+         "version" : "0.20"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Class to handle text in an OO way",
+         "dir" : "/home/runner/work/Data-Text/Data-Text",
+         "finish" : 1787944736.4022,
+         "name" : "Data-Text",
+         "perl" : "5.40.5",
+         "run" : "t/version.t",
+         "start" : 1787944736.40192,
+         "version" : "0.20"
+      }
+   ],
+   "summary" : {
+      "/opt/hostedtoolcache/perl/5.40.5/x64/bin/fuzz-harness-generator" : {
+         "branch" : {
+            "covered" : 11,
+            "error" : 69,
+            "percentage" : 13.75,
+            "total" : 80,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 5,
+            "error" : 25,
+            "percentage" : 16.6666666666667,
+            "total" : 30,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 52,
+            "error" : 120,
+            "percentage" : 30.2325581395349,
+            "total" : 172
+         },
+         "subroutine" : {
+            "covered" : 9,
+            "error" : 4,
+            "percentage" : 69.2307692307692,
+            "total" : 13
+         },
+         "total" : {
+            "covered" : 77,
+            "error" : 218,
+            "percentage" : 26.1016949152542,
+            "total" : 295,
+            "uncoverable" : 0
+         }
+      },
+      "/opt/hostedtoolcache/perl/5.40.5/x64/bin/prove" : {
+         "branch" : {
+            "covered" : 2,
+            "error" : 2,
+            "percentage" : 50,
+            "total" : 4,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 14,
+            "percentage" : 100,
+            "total" : 14
+         },
+         "subroutine" : {
+            "covered" : 4,
+            "percentage" : 100,
+            "total" : 4
+         },
+         "total" : {
+            "covered" : 20,
+            "error" : 2,
+            "percentage" : 90.9090909090909,
+            "total" : 22,
+            "uncoverable" : 0
+         }
+      },
+      "/tmp/7L1deA8v89" : {
+         "branch" : {
+            "covered" : 171,
+            "error" : 575,
+            "percentage" : 22.9222520107239,
+            "total" : 746,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 63,
+            "error" : 254,
+            "percentage" : 19.8738170347003,
+            "total" : 317,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 420,
+            "error" : 813,
+            "percentage" : 34.0632603406326,
+            "total" : 1233
+         },
+         "subroutine" : {
+            "covered" : 40,
+            "error" : 21,
+            "percentage" : 65.5737704918033,
+            "total" : 61
+         },
+         "total" : {
+            "covered" : 694,
+            "error" : 1663,
+            "percentage" : 29.4442087399236,
+            "total" : 2357,
+            "uncoverable" : 0
+         }
+      },
+      "/tmp/CtxWmgkg9H" : {
+         "branch" : {
+            "covered" : 171,
+            "error" : 575,
+            "percentage" : 22.9222520107239,
+            "total" : 746,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 63,
+            "error" : 254,
+            "percentage" : 19.8738170347003,
+            "total" : 317,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 420,
+            "error" : 813,
+            "percentage" : 34.0632603406326,
+            "total" : 1233
+         },
+         "subroutine" : {
+            "covered" : 40,
+            "error" : 21,
+            "percentage" : 65.5737704918033,
+            "total" : 61
+         },
+         "total" : {
+            "covered" : 694,
+            "error" : 1663,
+            "percentage" : 29.4442087399236,
+            "total" : 2357,
+            "uncoverable" : 0
+         }
+      },
+      "/tmp/MoGDSBMuSE" : {
+         "branch" : {
+            "covered" : 40,
+            "error" : 706,
+            "percentage" : 5.36193029490616,
+            "total" : 746,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 18,
+            "error" : 299,
+            "percentage" : 5.6782334384858,
+            "total" : 317,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 198,
+            "error" : 1010,
+            "percentage" : 16.3907284768212,
+            "total" : 1208
+         },
+         "subroutine" : {
+            "covered" : 26,
+            "error" : 34,
+            "percentage" : 43.3333333333333,
+            "total" : 60
+         },
+         "total" : {
+            "covered" : 282,
+            "error" : 2049,
+            "percentage" : 12.0978120978121,
+            "total" : 2331,
+            "uncoverable" : 0
+         }
+      },
+      "Total" : {
+         "branch" : {
+            "covered" : 434,
+            "error" : 1928,
+            "percentage" : 18.3742591024555,
+            "total" : 2362,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 159,
+            "error" : 833,
+            "percentage" : 16.0282258064516,
+            "total" : 992,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 1242,
+            "error" : 2758,
+            "percentage" : 31.05,
+            "total" : 4000
+         },
+         "subroutine" : {
+            "covered" : 146,
+            "error" : 80,
+            "percentage" : 64.6017699115044,
+            "total" : 226
+         },
+         "total" : {
+            "covered" : 1981,
+            "error" : 5599,
+            "percentage" : 26.1345646437995,
+            "total" : 7580,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Data/Text.pm" : {
+         "branch" : {
+            "covered" : 39,
+            "error" : 1,
+            "percentage" : 97.5,
+            "total" : 40,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 10,
+            "error" : 1,
+            "percentage" : 90.9090909090909,
+            "total" : 11,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 138,
+            "error" : 2,
+            "percentage" : 98.5714285714286,
+            "total" : 140
+         },
+         "subroutine" : {
+            "covered" : 27,
+            "percentage" : 100,
+            "total" : 27
+         },
+         "total" : {
+            "covered" : 214,
+            "error" : 4,
+            "percentage" : 98.1651376146789,
+            "total" : 218,
+            "uncoverable" : 0
+         }
+      }
+   }
+}
