@@ -11,7 +11,7 @@ config:
   test_non_ascii: on
   dedup: on
 
-new: ''
+new: ""
 
 input:
   text:
@@ -26,6 +26,5 @@ output:
 cases:
   undef_dies:
     input:
-      text:
-        undef
+      text: undef
     _STATUS: DIES

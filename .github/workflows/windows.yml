@@ -7,9 +7,9 @@ permissions:
 on:
   push:
     branches:
-      - '*'
+      - "*"
     tags-ignore:
-      - '*'
+      - "*"
   pull_request:
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       matrix:
         os:
           - windows-latest
-        perl: ['5.34', '5.32', '5.30', '5.28']
+        perl: ["5.34", "5.32", "5.30", "5.28"]
     name: Perl ${{ matrix.perl }} on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v7
@@ -33,16 +33,16 @@ jobs:
         run: |
           cpanm -iqn ExtUtils::MakeMaker Test::Most
           cpanm -iqn --skip-satisfied --installdeps --notest .
-#     - name: Run Tests
-#       run: |
-#         choco --no-progress install codecov
-#         cover -test
-#         cover -report codecov
-#         curl -Os https://uploader.codecov.io/latest/windows/codecov.exe
-#         ./codecov.exe -t ${{ secrets.CODECOV_TOKEN }}
-#       env:
-#         AUTHOR_TESTING: 1
-#         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      #     - name: Run Tests
+      #       run: |
+      #         choco --no-progress install codecov
+      #         cover -test
+      #         cover -report codecov
+      #         curl -Os https://uploader.codecov.io/latest/windows/codecov.exe
+      #         ./codecov.exe -t ${{ secrets.CODECOV_TOKEN }}
+      #       env:
+      #         AUTHOR_TESTING: 1
+      #         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Run Tests
         run: prove -l -b t
         env:
